@@ -15,3 +15,34 @@ canvas {
   position: fixed;
   right: 0;
 }
+
+#readme {
+  background: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#readme .title {
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  padding: 0 1em;
+  margin: 0;
+}
+
+#readme pre {
+  margin: 0;
+}
+
+#readme .item {
+  padding: 1em;
+}
+
+#readme .title:first-child {
+  padding-top: 1em;
+}

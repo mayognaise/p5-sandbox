@@ -6,5 +6,13 @@ module.exports = {
     filename: 'utils.js',
     path: path.resolve(__dirname, 'dist')
   },
-  watch: true
+  watch: true,
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
 }
