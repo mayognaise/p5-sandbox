@@ -9,16 +9,15 @@ function setup() {
   rectMode(CENTER)
   noStroke()
   stats = new Stats()
-  new ReadMe(['sketch.js', 'README.md'])
+  new ReadMe(['README.md', 'sketch.js'])
 }
 
 function draw() {
   const y = map(mouseY, 0, height, 0, h)
-  const wdt = width / 2
-  const hgt = height / 2
+  const hgt = map(mouseX, 0, width, 0, height)
   background(y, s, b)
-  fill(hgt - y, s, b)
-  rect(0, 0, wdt, hgt)
+  fill((height / 2) - y, s, b)
+  rect(0, 0, mouseX, hgt)
   stats.update()
 }
 

@@ -1,0 +1,62 @@
+body
+  margin 0
+  padding 0
+  overflow hidden
+
+canvas
+  position fixed
+  vertical-align top
+
+#stats
+  background black
+  bottom 0
+  color rgb(0, 255, 0)
+  font-family "Courier New", Courier, monospace
+  padding 5px
+  position fixed
+  left 0
+
+#readme
+  .wrapper
+    background #fafafa
+    height 100%
+    overflow-x hidden
+    overflow-y auto
+    position fixed
+    right 0
+    top 0
+    width calc(100% - 50px)
+  &:not(.is-show)
+    .wrapper
+      display none
+  .markdown
+    padding 1em
+    font-family helvetica, arial
+    hr
+      border solid 0.5px black
+  .title
+    color black
+    font-family "Courier New", Courier, monospace
+    font-weight 600
+    margin 0
+    padding 0 1em
+    &:first-child
+      padding-top 1em
+  pre
+    margin 0
+  code
+    padding 1em 1em 2em
+  .toggle-button
+    background black
+    border-radius 0
+    border none
+    bottom 0
+    color white
+    font-size larger
+    padding 5px 8px
+    position fixed
+    right 0
+    &:focus
+      background yellow
+      color black
+      outline 0
