@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  position: fixed;
+  vertical-align: top;
+}
+#stats {
+  background: black;
+  bottom: 0;
+  color: rgb(0, 255, 0);
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+}
