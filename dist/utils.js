@@ -165,7 +165,6 @@ module.exports = class ReadMe {
     button.addEventListener('click', () => {
       this.el.classList.toggle('is-show')
     })
-    button.innerHTML = 'ⓘ'
     this.el.appendChild(button)
     // start load files
     this.load()
@@ -250,11 +249,12 @@ module.exports = class ReadMe {
 
 module.exports = class Stats {
   constructor() {
-    this.div = createDiv(document.body)
-    this.div.elt.setAttribute('id', 'stats')
+    this.el = document.createElement('div')
+    this.el.setAttribute('id', 'stats')
+    document.body.appendChild(this.el)
   }
-  update() {
-    this.div.html(floor(frameRate()))
+  update(val) {
+    this.el.innerHTML = val
   }
 }
 
@@ -292,7 +292,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  font-family: \"Courier New\", Courier, monospace;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n#readme .wrapper {\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme .markdown {\n  padding: 1em;\n  font-family: helvetica, arial;\n}\n#readme .markdown hr {\n  border: solid 0.5px #000;\n}\n#readme .title {\n  color: #000;\n  font-family: \"Courier New\", Courier, monospace;\n  font-weight: 600;\n  margin: 0;\n  padding: 0 1em;\n}\n#readme .title:first-child {\n  padding-top: 1em;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1em 1em 2em;\n}\n#readme .toggle-button {\n  background: #000;\n  border-radius: 0;\n  border: none;\n  bottom: 0;\n  color: #fff;\n  font-size: larger;\n  padding: 5px 8px;\n  position: fixed;\n  right: 0;\n}\n#readme .toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  font-family: \"Courier New\", Courier, monospace;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n#readme .wrapper {\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme .markdown {\n  padding: 1rem;\n  font-family: helvetica, arial;\n}\n#readme .markdown hr {\n  border: solid 0.5px #000;\n}\n#readme .markdown > *:first-child {\n  margin-top: 0;\n}\n#readme .title {\n  color: #000;\n  font-family: \"Courier New\", Courier, monospace;\n  font-weight: 600;\n  margin: 0;\n  padding: 0 1rem;\n}\n#readme .title:first-child {\n  padding-top: 1rem;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1rem 1rem 2rem;\n}\n#readme .toggle-button {\n  background: #000;\n  border-radius: 0;\n  border: none;\n  bottom: 0;\n  color: #fff;\n  font-size: larger;\n  padding: 5px 8px;\n  position: fixed;\n  right: 0;\n}\n#readme .toggle-button:after {\n  content: '\\24D8';\n}\n#readme .toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n#readme.is-show .toggle-button:after {\n  content: '\\2715';\n}\n", ""]);
 
 // exports
 

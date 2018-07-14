@@ -30,22 +30,24 @@ canvas
     .wrapper
       display none
   .markdown
-    padding 1em
+    padding 1rem
     font-family helvetica, arial
     hr
       border solid 0.5px black
+    > *:first-child
+      margin-top 0
   .title
     color black
     font-family "Courier New", Courier, monospace
     font-weight 600
     margin 0
-    padding 0 1em
+    padding 0 1rem
     &:first-child
-      padding-top 1em
+      padding-top 1rem
   pre
     margin 0
   code
-    padding 1em 1em 2em
+    padding 1rem 1rem 2rem
   .toggle-button
     background black
     border-radius 0
@@ -56,7 +58,13 @@ canvas
     padding 5px 8px
     position fixed
     right 0
+    &:after
+      content: 'ⓘ'
     &:focus
       background yellow
       color black
       outline 0
+  &.is-show
+    .toggle-button
+      &:after
+        content: '✕'

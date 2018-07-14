@@ -26,7 +26,6 @@ module.exports = class ReadMe {
     button.addEventListener('click', () => {
       this.el.classList.toggle('is-show')
     })
-    button.innerHTML = 'ⓘ'
     this.el.appendChild(button)
     // start load files
     this.load()

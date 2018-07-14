@@ -18,7 +18,7 @@ function draw() {
   background(y, s, b)
   fill((height / 2) - y, s, b)
   rect(0, 0, mouseX, hgt)
-  stats.update()
+  stats.update(floor(frameRate()))
 }
 
 function windowResized() {
