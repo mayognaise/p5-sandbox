@@ -18,6 +18,7 @@ function setup() {
   for (var x = 0; x < cols; x++) {
     terrain[x] = []
   }
+  // for debug
   stats = new Stats()
   new Playback()
   new ReadMe(['README.md', 'sketch.js'])
