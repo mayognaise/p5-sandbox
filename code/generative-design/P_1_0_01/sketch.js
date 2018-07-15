@@ -16,7 +16,7 @@ function draw() {
   const y = map(mouseY, 0, height, 0, h)
   const hgt = map(mouseX, 0, width, 0, height)
   background(y, s, b)
-  fill((height / 2) - y, s, b)
+  fill(h - y, s, b)
   rect(0, 0, mouseX, hgt)
   stats.update(floor(frameRate()))
 }
