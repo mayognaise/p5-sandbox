@@ -11,10 +11,10 @@ The code is based on [this](http://www.generative-gestaltung.de/2/)
 ### Coding Train
 
 #### Coding Challenge
-- #11: 3D Terrain Generation with Perlin Noise [demo][cc11-demo] | [code][cc11-code]
+- #11: 3D Terrain Generation with Perlin Noise [demo][cc11-demo] / [code][cc11-code]
 
 ### Generative Design
-- #P1_0_01 changing colors and size by moving the mouse [demo][P1_0_01-demo] | [code][P1_0_01-code]
+- #P1_0_01 changing colors and size by moving the mouse [demo][P1_0_01-demo] / [code][P1_0_01-code]
 
 [cc11-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc11-3d-terrain-with-perlin-noise
 [P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/code/generative-design/P_1_0_01
