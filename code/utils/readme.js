@@ -32,6 +32,7 @@ module.exports = class ReadMe {
   }
   getJSText(data) {
     const spliceList = [
+      '//',
       'let stats',
       'stats = new Stats',
       'new ReadMe',

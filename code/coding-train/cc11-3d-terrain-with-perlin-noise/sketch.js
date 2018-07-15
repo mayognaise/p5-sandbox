@@ -1,8 +1,11 @@
+const scl = 25
+const terrain = []
+let stats
 let w, h
 let cols, rows
-const scl = 25
 let flying = 0
-const terrain = []
+let loopFlag = true
+let firstFlag = true
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight)
@@ -10,40 +13,29 @@ function windowResized() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL)
-  w = windowWidth * 1.5
-  h = windowHeight
+  w = windowWidth * 2
+  h = windowHeight * 1.5
   cols = w / scl
   rows = h / scl
   for (var x = 0; x < cols; x++) {
     terrain[x] = []
   }
+  stats = new Stats()
+  new ReadMe(['README.md', 'sketch.js'])
 }
 
 function draw() {
-  if (toggle) {
-    flying -= 0.1
-  }
-  let yoff = flying
+  flying -= 0.01
   for (let y = 0; y < rows; y++) {
-    let xoff = 0
     for (let x = 0; x < cols; x++) {
-      terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100)
-      xoff += 0.2
+      terrain[x][y] = map(noise(x / 10, y / 10 + flying), 0, 1, -100, 100)
     }
-    yoff += 0.2
   }
 
   background(0)
-  // stroke(255)
-  // strokeWeight(1)
   noStroke()
-  // noFill()
-  // fill(80)
-  // normalMaterial()
-  translate(0, h / 10)
-  rotateX(PI / 3)
-  // rotateX(map(mouseX, 0, width, PI / 3, PI / 1.5))
-  // rotateZ(map(mouseY, 0, height, 0, PI))
+  rotateX(map(firstFlag ? width / 2 : mouseX, 0, width, PI / 1.5, 0))
+  rotateZ(map(firstFlag ? height / 2 : mouseY, 0, height, -PI, PI))
   translate(w / -2, h / -2)
   for (let y = 0; y < rows - 1; y++) {
     beginShape(TRIANGLE_STRIP)
@@ -54,13 +46,14 @@ function draw() {
     }
     endShape(CLOSE)
   }
-  // noLoop()
+  stats.update(floor(frameRate()))
 }
 
-let toggle = true
-
 function mouseClicked() {
-  console.log(frameRate())
-  toggle = !toggle
-  toggle ? loop() : noLoop()
+  if (firstFlag) {
+    firstFlag = false
+    return
+  }
+  loopFlag = !loopFlag
+  loopFlag ? loop() : noLoop()
 }

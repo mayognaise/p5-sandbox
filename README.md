@@ -8,6 +8,13 @@ This is a sandbox of p5. Mainly I converted open-sourced processing project with
 
 The code is based on [this](http://www.generative-gestaltung.de/2/)
 
+### Coding Train
+
+#### Coding Challenge
+- #11: 3D Terrain Generation with Perlin Noise [code][cc11-code] [demo][cc11-demo]
+
+[cc11-code]: 
+
 ## Instalation
 
 ```

@@ -1,8 +1,10 @@
 module.exports = class Stats {
   constructor() {
-    this.el = document.createElement('div')
-    this.el.setAttribute('id', 'stats')
-    document.body.appendChild(this.el)
+    const main = document.createElement('div')
+    main.setAttribute('id', 'stats')
+    this.el = document.createElement('span')
+    main.appendChild(this.el)
+    document.body.appendChild(main)
   }
   update(val) {
     this.el.innerHTML = val
