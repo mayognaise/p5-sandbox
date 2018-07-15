@@ -1,4 +1,7 @@
-## Coding Challenge #11: 3D Terrain Generation with Perlin Noise
+## Coding Train
+
+### Coding Challenge
+- #11: 3D Terrain Generation with Perlin Noise [demo][cc11-demo] [code][cc11-code]
 
 [Reference video][reference] by [Generative Design][coding-train]
 
@@ -11,3 +14,5 @@ TRIANGLE_STRIP with WEBGL is not working properly: [Github page][issue]
 [reference]: https://youtu.be/IKB1hWWedMk
 [coding-train]: http://codingtra.in
 [issue]: https://github.com/processing/p5.js/issues/2344
+[cc11-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc11-3d-terrain-with-perlin-noise
+[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc11-3d-terrain-with-perlin-noise
