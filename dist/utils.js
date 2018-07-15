@@ -139,8 +139,6 @@ window.ReadMe = __webpack_require__(/*! ./readme.js */ "./code/utils/readme.js")
 
 /**
  * code visualer
- * @note customize highlightjs to make file size smaller
- * @see https://highlightjs.org/download/
  */
 
 const showdown = __webpack_require__(/*! showdown */ "./node_modules/showdown/dist/showdown.js")

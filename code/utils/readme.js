@@ -1,7 +1,5 @@
 /**
  * code visualer
- * @note customize highlightjs to make file size smaller
- * @see https://highlightjs.org/download/
  */
 
 const showdown = require('showdown')
