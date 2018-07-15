@@ -1,4 +1,9 @@
+$toggleButtonSize = 36px
+
+html
+  overflow hidden !important
 body
+  font-family helvetica, arial
   margin 0
   padding 0
   overflow hidden
@@ -16,8 +21,24 @@ canvas
   position fixed
   left 0
 
+.toggle-button
+  background black
+  border none
+  border-radius 0
+  color white
+  font-family inherit
+  font-size larger
+  height: $toggleButtonSize
+  position fixed
+  width: $toggleButtonSize
+  &:focus
+    background yellow
+    color black
+    outline 0
+
 #readme
   .wrapper
+    -webkit-overflow-scrolling touch
     background #fafafa
     height 100%
     overflow-x hidden
@@ -31,7 +52,6 @@ canvas
       display none
   .markdown
     padding 1rem
-    font-family helvetica, arial
     hr
       border solid 0.5px black
     > *:first-child
@@ -49,22 +69,22 @@ canvas
   code
     padding 1rem 1rem 2rem
   .toggle-button
-    background black
-    border-radius 0
-    border none
     bottom 0
-    color white
-    font-size larger
-    padding 5px 8px
-    position fixed
     right 0
     &:after
       content: 'ⓘ'
-    &:focus
-      background yellow
-      color black
-      outline 0
   &.is-show
     .toggle-button
       &:after
         content: '✕'
+
+#playback
+  .toggle-button
+    bottom: $toggleButtonSize + 1
+    right 0
+    &:after
+      content: 'Ⅱ'
+  &.is-paused
+    .toggle-button
+      &:after
+        content: '▶'

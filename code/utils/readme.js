@@ -23,7 +23,8 @@ module.exports = class ReadMe {
     // toggle button
     const button = document.createElement('button')
     button.classList.add('toggle-button')
-    button.addEventListener('click', () => {
+    button.addEventListener('click', e => {
+      e.preventDefault()
       this.el.classList.toggle('is-show')
     })
     this.el.appendChild(button)
@@ -36,6 +37,7 @@ module.exports = class ReadMe {
       'let stats',
       'stats = new Stats',
       'new ReadMe',
+      'new Playback',
       'stats.update'
     ]
     const array = data.split('\n')

@@ -1,3 +1,4 @@
 require('./css/default.styl')
-window.Stats = require('./stats.js')
-window.ReadMe = require('./readme.js')
+window.Stats = require('./Stats')
+window.ReadMe = require('./ReadMe')
+window.Playback = require('./Playback')

@@ -86,53 +86,49 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./code/utils/css/default.styl":
-/*!*************************************!*\
-  !*** ./code/utils/css/default.styl ***!
-  \*************************************/
+/***/ "./code/utils/Playback.js":
+/*!********************************!*\
+  !*** ./code/utils/Playback.js ***!
+  \********************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./code/utils/css/default.styl");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./code/utils/index.js":
-/*!*****************************!*\
-  !*** ./code/utils/index.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./css/default.styl */ "./code/utils/css/default.styl")
-window.Stats = __webpack_require__(/*! ./stats.js */ "./code/utils/stats.js")
-window.ReadMe = __webpack_require__(/*! ./readme.js */ "./code/utils/readme.js")
+/**
+ * Playback for p5 loop animation
+ */
+module.exports = class Playback {
+  constructor() {
+    // main element
+    const el = document.createElement('div')
+    el.id = 'playback'
+    document.body.appendChild(el)
+    // wrapper element
+    const wrapper = document.createElement('div')
+    wrapper.classList.add('wrapper')
+    el.appendChild(wrapper)
+    // toggle button
+    const button = document.createElement('button')
+    button.classList.add('toggle-button')
+    button.addEventListener('click', e => {
+      e.preventDefault()
+      const paused = 'is-paused'
+      el.classList.toggle(paused)
+      if (el.classList.contains(paused)) {
+        noLoop()
+      } else {
+        loop()
+      }
+    })
+    el.appendChild(button)
+  }
+}
 
 
 /***/ }),
 
-/***/ "./code/utils/readme.js":
+/***/ "./code/utils/ReadMe.js":
 /*!******************************!*\
-  !*** ./code/utils/readme.js ***!
+  !*** ./code/utils/ReadMe.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -162,7 +158,8 @@ module.exports = class ReadMe {
     // toggle button
     const button = document.createElement('button')
     button.classList.add('toggle-button')
-    button.addEventListener('click', () => {
+    button.addEventListener('click', e => {
+      e.preventDefault()
       this.el.classList.toggle('is-show')
     })
     this.el.appendChild(button)
@@ -175,6 +172,7 @@ module.exports = class ReadMe {
       'let stats',
       'stats = new Stats',
       'new ReadMe',
+      'new Playback',
       'stats.update'
     ]
     const array = data.split('\n')
@@ -241,9 +239,9 @@ module.exports = class ReadMe {
 
 /***/ }),
 
-/***/ "./code/utils/stats.js":
+/***/ "./code/utils/Stats.js":
 /*!*****************************!*\
-  !*** ./code/utils/stats.js ***!
+  !*** ./code/utils/Stats.js ***!
   \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -260,6 +258,51 @@ module.exports = class Stats {
     this.el.innerHTML = val
   }
 }
+
+
+/***/ }),
+
+/***/ "./code/utils/css/default.styl":
+/*!*************************************!*\
+  !*** ./code/utils/css/default.styl ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./code/utils/css/default.styl");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./code/utils/index.js":
+/*!*****************************!*\
+  !*** ./code/utils/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./css/default.styl */ "./code/utils/css/default.styl")
+window.Stats = __webpack_require__(/*! ./Stats */ "./code/utils/Stats.js")
+window.ReadMe = __webpack_require__(/*! ./ReadMe */ "./code/utils/ReadMe.js")
+window.Playback = __webpack_require__(/*! ./Playback */ "./code/utils/Playback.js")
 
 
 /***/ }),
@@ -295,7 +338,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  font-family: \"Courier New\", Courier, monospace;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n#readme .wrapper {\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme .markdown {\n  padding: 1rem;\n  font-family: helvetica, arial;\n}\n#readme .markdown hr {\n  border: solid 0.5px #000;\n}\n#readme .markdown > *:first-child {\n  margin-top: 0;\n}\n#readme .title {\n  color: #000;\n  font-family: \"Courier New\", Courier, monospace;\n  font-weight: 600;\n  margin: 0;\n  padding: 0 1rem;\n}\n#readme .title:first-child {\n  padding-top: 1rem;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1rem 1rem 2rem;\n}\n#readme .toggle-button {\n  background: #000;\n  border-radius: 0;\n  border: none;\n  bottom: 0;\n  color: #fff;\n  font-size: larger;\n  padding: 5px 8px;\n  position: fixed;\n  right: 0;\n}\n#readme .toggle-button:after {\n  content: '\\24D8';\n}\n#readme .toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n#readme.is-show .toggle-button:after {\n  content: '\\2715';\n}\n", ""]);
+exports.push([module.i, "html {\n  overflow: hidden !important;\n}\nbody {\n  font-family: helvetica, arial;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  font-family: \"Courier New\", Courier, monospace;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n.toggle-button {\n  background: #000;\n  border: none;\n  border-radius: 0;\n  color: #fff;\n  font-family: inherit;\n  font-size: larger;\n  height: 36px;\n  position: fixed;\n  width: 36px;\n}\n.toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n#readme .wrapper {\n  -webkit-overflow-scrolling: touch;\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme .markdown {\n  padding: 1rem;\n}\n#readme .markdown hr {\n  border: solid 0.5px #000;\n}\n#readme .markdown > *:first-child {\n  margin-top: 0;\n}\n#readme .title {\n  color: #000;\n  font-family: \"Courier New\", Courier, monospace;\n  font-weight: 600;\n  margin: 0;\n  padding: 0 1rem;\n}\n#readme .title:first-child {\n  padding-top: 1rem;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1rem 1rem 2rem;\n}\n#readme .toggle-button {\n  bottom: 0;\n  right: 0;\n}\n#readme .toggle-button:after {\n  content: '\\24D8';\n}\n#readme.is-show .toggle-button:after {\n  content: '\\2715';\n}\n#playback .toggle-button {\n  bottom: 37px;\n  right: 0;\n}\n#playback .toggle-button:after {\n  content: '\\2161';\n}\n#playback.is-paused .toggle-button:after {\n  content: '\\25B6';\n}\n", ""]);
 
 // exports
 
