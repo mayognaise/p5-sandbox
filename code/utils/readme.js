@@ -7,7 +7,9 @@
 const showdown = require('showdown')
 const converter = new showdown.Converter({ openLinksInNewWindow: true })
 
-require('highlightjs/styles/atom-one-light.css')
+const hljs = require('highlight.js/lib/highlight.js')
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))
+require('highlight.js/styles/atom-one-light.css')
 
 module.exports = class ReadMe {
   constructor(paths) {

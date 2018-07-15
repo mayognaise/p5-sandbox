@@ -16,7 +16,7 @@
   "devDependencies": {
     "browser-sync": "^2.24.5",
     "css-loader": "^1.0.0",
-    "highlightjs": "^9.10.0",
+    "highlight.js": "^9.12.0",
     "showdown": "^1.8.6",
     "style-loader": "^0.21.0",
     "stylus": "^0.54.5",
