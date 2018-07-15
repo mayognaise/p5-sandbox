@@ -13,7 +13,9 @@ The code is based on [this](http://www.generative-gestaltung.de/2/)
 #### Coding Challenge
 - #11: 3D Terrain Generation with Perlin Noise [code][cc11-code] [demo][cc11-demo]
 
-[cc11-code]: 
+[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc11-3d-terrain-with-perlin-noise
+
+[cc11-demo]:https://mayognaise.github.io/p5-sandbox/code/coding-train/cc11-3d-terrain-with-perlin-noise
 
 ## Instalation
 
