@@ -2,10 +2,6 @@ This is a sandbox of p5. Mainly I converted open-sourced processing project with
 
 # Content
 
-## Generative Design
-
-The code is based on [this](http://www.generative-gestaltung.de/2/)
-
 ## Coding Train
 
 ### Coding Challenge
