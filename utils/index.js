@@ -1,4 +1,5 @@
 require('./css/default.styl')
+require('./css/utils.styl')
 window.Stats = require('./Stats')
 window.ReadMe = require('./ReadMe')
 window.Controller = require('./Controller')

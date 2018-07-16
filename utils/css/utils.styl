@@ -1,0 +1,92 @@
+$toggleButtonSize = 36px
+
+html
+body
+  overflow hidden !important
+
+canvas
+  position fixed
+  vertical-align top
+
+#stats
+  background black
+  bottom 0
+  color rgb(0, 255, 0)
+  padding 5px
+  position fixed
+  left 0
+  .is-hidden &
+    display none
+
+.toggle-button
+  background black
+  border none
+  border-radius 0
+  color white
+  font-family inherit
+  font-size larger
+  height: $toggleButtonSize
+  position fixed
+  text-align center
+  width: $toggleButtonSize
+  &:focus
+    background yellow
+    color black
+    outline 0
+
+#readme
+  .wrapper
+    -webkit-overflow-scrolling touch
+    background #fafafa
+    height 100%
+    overflow-x hidden
+    overflow-y auto
+    position fixed
+    right 0
+    top 0
+    width calc(100% - 50px)
+  .is-hidden &
+    display none
+  &:not(.is-show)
+    .wrapper
+      display none
+  .markdown
+    padding 1rem
+    > *:first-child
+      margin-top 0
+    ul
+      list-style none
+      padding-left 0
+      a
+        margin-left .5rem
+  .title
+    margin 0
+    padding 0 1rem
+    &:first-child
+      padding-top 1rem
+  pre
+    margin 0
+  code
+    padding 1rem 1rem 2rem
+  .toggle-button
+    bottom 0
+    right 0
+    &:after
+      content: 'ⓘ'
+  &.is-show
+    .toggle-button
+      &:after
+        content: '✕'
+
+#playback
+  .toggle-button
+    bottom: $toggleButtonSize + 1
+    right 0
+    &:after
+      content: 'Ⅱ'
+  &.is-paused
+    .toggle-button
+      &:after
+        content: '▸'
+  .is-hidden &
+    display none

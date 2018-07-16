@@ -1,96 +1,39 @@
-$toggleButtonSize = 36px
+@import url('https://fonts.googleapis.com/css?family=Abel')
+
+$theme = rgb(0, 0, 255)
+$themeInvert = rgb(255, 255, 0)
+
 
 html
-  overflow hidden !important
 body
-  font-family helvetica, arial
+  font-size 1rem
+
+body
+  -webkit-print-color-adjust exact
+  color black
+  font-family 'Abel', sans-serif
   margin 0
   padding 0
-  overflow hidden
 
-canvas
-  position fixed
-  vertical-align top
+h1
+  font-size 32px
 
-#stats
-  background black
-  bottom 0
-  color rgb(0, 255, 0)
-  font-family "Courier New", Courier, monospace
-  padding 5px
-  position fixed
-  left 0
-  .is-hidden &
-    display none
+h2
+  font-size 28px
+  margin-top 3rem
 
-.toggle-button
-  background black
-  border none
-  border-radius 0
-  color white
-  font-family inherit
-  font-size larger
-  height: $toggleButtonSize
-  position fixed
-  width: $toggleButtonSize
+h3
+  font-size 21px
+
+a
+  background: repeating-linear-gradient(45deg, $themeInvert, $themeInvert 1px, white 1px, white 5px)
+  color: $theme
+  outline 0
+  text-decoration none
+  &:hover
   &:focus
-    background yellow
-    color black
-    outline 0
+    background: $theme
+    color: $themeInvert
 
-#readme
-  .wrapper
-    -webkit-overflow-scrolling touch
-    background #fafafa
-    height 100%
-    overflow-x hidden
-    overflow-y auto
-    position fixed
-    right 0
-    top 0
-    width calc(100% - 50px)
-  .is-hidden &
-    display none
-  &:not(.is-show)
-    .wrapper
-      display none
-  .markdown
-    padding 1rem
-    hr
-      border solid 0.5px black
-    > *:first-child
-      margin-top 0
-  .title
-    color black
-    font-family "Courier New", Courier, monospace
-    font-weight 600
-    margin 0
-    padding 0 1rem
-    &:first-child
-      padding-top 1rem
-  pre
-    margin 0
-  code
-    padding 1rem 1rem 2rem
-  .toggle-button
-    bottom 0
-    right 0
-    &:after
-      content: 'ⓘ'
-  &.is-show
-    .toggle-button
-      &:after
-        content: '✕'
-
-#playback
-  .toggle-button
-    bottom: $toggleButtonSize + 1
-    right 0
-    &:after
-      content: 'Ⅱ'
-  &.is-paused
-    .toggle-button
-      &:after
-        content: '▶'
-  .is-hidden &
-    display none
+hr
+  border solid .5px black

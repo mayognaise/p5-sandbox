@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./scripts/build-index/default.styl":
-/*!*************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./scripts/build-index/default.styl ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./scripts/build-index/base.styl":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./scripts/build-index/base.styl ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98,7 +98,26 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n  color: #000;\n  -webkit-print-color-adjust: exact;\n}\n.container {\n  width: 80%;\n  margin: auto;\n  min-width: 288px;\n  max-width: 1024px;\n  padding-bottom: 5rem;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  text-decoration: none;\n  color: #00f;\n  background: linear-gradient(to bottom, transparent, #00f) no-repeat 0 100%;\n  background-size: 100% 1px;\n  outline: 0;\n}\na:focus {\n  background: linear-gradient(to bottom, #00f, #00f) no-repeat 0 100%;\n  background-size: 100% 100%;\n  color: #ff0;\n}\nul {\n  list-style: none;\n  padding-left: 0;\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n}\nli {\n  padding-bottom: 0.5rem;\n  margin: 0.5rem;\n  position: relative;\n  margin-top: calc(20px + 1rem);\n  background: no-repeat 0 0;\n  background-size: contain;\n  width: calc(50% - 1rem);\n  padding-top: calc(50% - 0.5rem);\n}\nli:nth-child(1),\nli:nth-child(2) {\n  margin-top: 0;\n}\n@media print, (min-width: 768px) {\n  li {\n    width: calc(33.3% - 1rem);\n    padding-top: calc(33.3% - 0.5rem);\n  }\n  li:nth-child(3) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1024px) {\n  li {\n    width: calc(25% - 1rem);\n    padding-top: calc(25% - 0.5rem);\n  }\n  li:nth-child(4) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1280px) {\n  li {\n    width: calc(20% - 1rem);\n    padding-top: calc(20% - 0.5rem);\n  }\n  li:nth-child(5) {\n    margin-top: 0;\n  }\n}\nli a {\n  display: block;\n}\n", ""]);
+exports.push([module.i, ".container {\n  margin: auto;\n  max-width: 1024px;\n  min-width: 288px;\n  padding-bottom: 1rem;\n  width: 80%;\n}\nul {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  padding-left: 0;\n}\nli {\n  background: no-repeat 0 0;\n  background-size: contain;\n  margin: 0.5rem;\n  margin-top: calc(20px + 1rem);\n  padding-bottom: 0.5rem;\n  padding-top: calc(50% - 0.5rem);\n  position: relative;\n  width: calc(50% - 1rem);\n}\nli:nth-child(1),\nli:nth-child(2) {\n  margin-top: 0;\n}\n@media print, (min-width: 768px) {\n  li {\n    padding-top: calc(33.3% - 0.5rem);\n    width: calc(33.3% - 1rem);\n  }\n  li:nth-child(3) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1024px) {\n  li {\n    padding-top: calc(25% - 0.5rem);\n    width: calc(25% - 1rem);\n  }\n  li:nth-child(4) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1280px) {\n  li {\n    padding-top: calc(20% - 0.5rem);\n    width: calc(20% - 1rem);\n  }\n  li:nth-child(5) {\n    margin-top: 0;\n  }\n}\nli a {\n  display: block;\n}\nli a:first-child {\n  margin-top: 0.5rem;\n}\nli p {\n  margin: 0;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./utils/css/default.styl":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./utils/css/default.styl ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Abel);", ""]);
+
+// module
+exports.push([module.i, "html,\nbody {\n  font-size: 1rem;\n}\nbody {\n  -webkit-print-color-adjust: exact;\n  color: #000;\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  background: repeating-linear-gradient(45deg, #ff0, #ff0 1px, #fff 1px, #fff 5px);\n  color: #00f;\n  outline: 0;\n  text-decoration: none;\n}\na:hover,\na:focus {\n  background: #00f;\n  color: #ff0;\n}\nhr {\n  border: solid 0.5px #000;\n}\n", ""]);
 
 // exports
 
@@ -690,7 +709,8 @@ module.exports = function (css) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./default.styl */ "./scripts/build-index/default.styl")
+__webpack_require__(/*! ../../utils/css/default.styl */ "./utils/css/default.styl")
+__webpack_require__(/*! ./base.styl */ "./scripts/build-index/base.styl")
 
 const init = () => {
   // unfocus when any link is clicked
@@ -716,15 +736,45 @@ document.addEventListener('DOMContentLoaded', init)
 
 /***/ }),
 
-/***/ "./scripts/build-index/default.styl":
-/*!******************************************!*\
-  !*** ./scripts/build-index/default.styl ***!
-  \******************************************/
+/***/ "./scripts/build-index/base.styl":
+/*!***************************************!*\
+  !*** ./scripts/build-index/base.styl ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./scripts/build-index/default.styl");
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/stylus-loader!./base.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./scripts/build-index/base.styl");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./utils/css/default.styl":
+/*!********************************!*\
+  !*** ./utils/css/default.styl ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./utils/css/default.styl");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

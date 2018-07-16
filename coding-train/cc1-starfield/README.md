@@ -1,13 +1,10 @@
-## Coding Train
+## [p5 Sandbox][p5-sandbox]
 
-### Coding Challenge
-- #1: Starfield [demo][cc1-demo] [code][cc1-code]
-
-[Reference video][reference] by [Coding Train][coding-train]
+- \#1: Starfield [demo][cc1-demo] [code][cc1-code] [reference][cc1-ref]
 
 ---
 
-[reference]: https://youtu.be/17WoOqgXsRM
-[coding-train]: http://codingtra.in
+[p5-sandbox]: https://github.com/mayognaise/p5-sandbox
 [cc1-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc1-starfield
 [cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc1-starfield
+[cc1-ref]: http://thecodingtrain.com/CodingChallenges/001-starfield.html

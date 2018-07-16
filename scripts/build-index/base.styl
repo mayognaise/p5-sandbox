@@ -1,0 +1,49 @@
+.container
+  margin auto
+  max-width 1024px
+  min-width 288px
+  padding-bottom 1rem
+  width 80%
+
+ul
+  display flex
+  flex-wrap wrap
+  list-style none
+  margin-left -.5rem
+  margin-right -.5rem
+  padding-left 0
+
+$iconSize = 20px
+li
+  background no-repeat 0 0
+  background-size contain
+  margin .5rem
+  margin-top: 'calc(%s + 1rem)' % $iconSize
+  padding-bottom .5rem
+  padding-top calc(50% - .5rem)
+  position relative
+  width calc(50% - 1rem)
+  &:nth-child(1)
+  &:nth-child(2)
+    margin-top 0
+  @media print, (min-width: 768px)
+    padding-top calc(33.3% - .5rem)
+    width calc(33.3% - 1rem)
+    &:nth-child(3)
+      margin-top 0
+  @media print, (min-width: 1024px)
+    padding-top calc(25% - .5rem)
+    width calc(25% - 1rem)
+    &:nth-child(4)
+      margin-top 0
+  @media print, (min-width: 1280px)
+    padding-top calc(20% - .5rem)
+    width calc(20% - 1rem)
+    &:nth-child(5)
+      margin-top 0
+  a
+    display block
+    &:first-child
+      margin-top .5rem
+  p
+    margin 0

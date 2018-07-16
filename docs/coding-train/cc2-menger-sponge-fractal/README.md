@@ -11,6 +11,6 @@
 
 [reference]: https://youtu.be/LG8ZK-rRkXo
 [coding-train]: http://codingtra.in
-[cc2-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge-fractal
-[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc2-menger-sponge-fractal
+[cc2-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge
+[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc2-menger-sponge
 [wiki]: https://en.wikipedia.org/wiki/Menger_sponge

@@ -1,4 +1,5 @@
-require('./default.styl')
+require('../../utils/css/default.styl')
+require('./base.styl')
 
 const init = () => {
   // unfocus when any link is clicked
