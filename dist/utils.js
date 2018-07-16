@@ -81,248 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./gh-pages/utils/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./utils/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./gh-pages/utils/Controller.js":
-/*!**************************************!*\
-  !*** ./gh-pages/utils/Controller.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Controller
- */
-module.exports = class Controller {
-  constructor() {
-    // main element
-    const el = document.createElement('div')
-    el.id = 'playback'
-    document.body.appendChild(el)
-    // wrapper element
-    const wrapper = document.createElement('div')
-    wrapper.classList.add('wrapper')
-    el.appendChild(wrapper)
-    // toggle button for p5 loop animation
-    const button = document.createElement('button')
-    button.classList.add('toggle-button')
-    button.addEventListener('click', e => {
-      e.preventDefault()
-      const paused = 'is-paused'
-      el.classList.toggle(paused)
-      if (el.classList.contains(paused)) {
-        noLoop()
-      } else {
-        loop()
-      }
-    })
-    el.appendChild(button)
-    // visibility
-    document.addEventListener('keydown', e => {
-      switch (e.key) {
-        // save image
-        case 's':
-          const keys = window.location.href.split('/').reverse()
-          const index = keys.findIndex(val => val)
-          saveCanvas(keys[index], 'png')
-          break
-        // toggle visibility
-        case 'h':
-          document.body.classList.toggle('is-hidden')
-          break
-        default:
-          break
-      }
-    })
-  }
-}
-
-
-/***/ }),
-
-/***/ "./gh-pages/utils/ReadMe.js":
-/*!**********************************!*\
-  !*** ./gh-pages/utils/ReadMe.js ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * code visualer
- */
-
-const showdown = __webpack_require__(/*! showdown */ "./node_modules/showdown/dist/showdown.js")
-const converter = new showdown.Converter({ openLinksInNewWindow: true })
-
-const hljs = __webpack_require__(/*! highlight.js/lib/highlight.js */ "./node_modules/highlight.js/lib/highlight.js")
-hljs.registerLanguage('javascript', __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js"))
-__webpack_require__(/*! highlight.js/styles/atom-one-light.css */ "./node_modules/highlight.js/styles/atom-one-light.css")
-
-module.exports = class ReadMe {
-  constructor(paths) {
-    this.paths = paths
-    // main element
-    this.el = document.createElement('div')
-    this.el.id = 'readme'
-    document.body.appendChild(this.el)
-    // wrapper element
-    this.wrapper = document.createElement('div')
-    this.wrapper.classList.add('wrapper')
-    this.el.appendChild(this.wrapper)
-    // toggle button
-    const button = document.createElement('button')
-    button.classList.add('toggle-button')
-    button.addEventListener('click', e => {
-      e.preventDefault()
-      this.el.classList.toggle('is-show')
-    })
-    this.el.appendChild(button)
-    // start load files
-    this.load()
-  }
-  getJSText(data) {
-    const spliceList = [
-      '//',
-      'let stats',
-      'stats = new Stats',
-      'new ReadMe',
-      'new Controller',
-      'stats.update'
-    ]
-    const array = data.split('\n')
-    for (let count = array.length - 1; count > -1; count--) {
-      const val = array[count]
-      if (spliceList.find(list => val.indexOf(list) !== -1)) {
-        array.splice(count, 1)
-      }
-    }
-    return array.join('\n')
-  }
-  render(items) {
-    items.forEach(({ type, data, title }) => {
-      if (type === 'md') {
-        const markdown = document.createElement('div')
-        markdown.classList.add('markdown')
-        markdown.innerHTML = converter.makeHtml(data)
-        this.wrapper.appendChild(markdown)
-      } else {
-        // header
-        const header = document.createElement('h3')
-        header.classList.add('title')
-        header.innerHTML = title
-        this.wrapper.appendChild(header)
-        // highlight code
-        const pre = document.createElement('pre')
-        const code = document.createElement('code')
-        code.classList.add(type)
-        code.innerHTML = type === 'js' ? this.getJSText(data) : data
-        pre.appendChild(code)
-        this.wrapper.appendChild(pre)
-        hljs.highlightBlock(code)
-      }
-    })
-  }
-  /**
-   * fetch files
-   * @see https://developer.mozilla.org/en-US/docs/Web/API/Response
-   */
-  async load() {
-    let items
-    const types = []
-    try {
-      const response = await Promise.all(this.paths.map(path => fetch(path)))
-      items = await Promise.all(response.map((res, index) => {
-        const arr = res.url.split('.')
-        const type = arr[arr.length - 1]
-        types[index] = type
-        switch (type) {
-          case 'json':
-            return res.json()
-          default:
-            return res.text()
-        }
-      }))
-    } catch (error) {
-      throw new Error(error)
-    }
-    if (!items) { return }
-    this.render(items.map((data, index) => ({ type: types[index], data, index, title: this.paths[index] })))
-  }
-}
-
-
-/***/ }),
-
-/***/ "./gh-pages/utils/Stats.js":
-/*!*********************************!*\
-  !*** ./gh-pages/utils/Stats.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = class Stats {
-  constructor() {
-    const main = document.createElement('div')
-    main.setAttribute('id', 'stats')
-    this.el = document.createElement('span')
-    main.appendChild(this.el)
-    document.body.appendChild(main)
-  }
-  update(val) {
-    this.el.innerHTML = val
-  }
-}
-
-
-/***/ }),
-
-/***/ "./gh-pages/utils/css/default.styl":
-/*!*****************************************!*\
-  !*** ./gh-pages/utils/css/default.styl ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./gh-pages/utils/css/default.styl");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./gh-pages/utils/index.js":
-/*!*********************************!*\
-  !*** ./gh-pages/utils/index.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./css/default.styl */ "./gh-pages/utils/css/default.styl")
-window.Stats = __webpack_require__(/*! ./Stats */ "./gh-pages/utils/Stats.js")
-window.ReadMe = __webpack_require__(/*! ./ReadMe */ "./gh-pages/utils/ReadMe.js")
-window.Controller = __webpack_require__(/*! ./Controller */ "./gh-pages/utils/Controller.js")
-
-
-/***/ }),
 
 /***/ "./node_modules/css-loader/index.js!./node_modules/highlight.js/styles/atom-one-light.css":
 /*!***************************************************************************************!*\
@@ -343,14 +105,14 @@ exports.push([module.i, "/*\n\nAtom One Light by Daniel Gamage\nOriginal One Lig
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./gh-pages/utils/css/default.styl":
-/*!************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./gh-pages/utils/css/default.styl ***!
-  \************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./utils/css/default.styl":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./utils/css/default.styl ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
@@ -6472,6 +6234,244 @@ module.exports = function (css) {
 	// send back the fixed css
 	return fixedCss;
 };
+
+
+/***/ }),
+
+/***/ "./utils/Controller.js":
+/*!*****************************!*\
+  !*** ./utils/Controller.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Controller
+ */
+module.exports = class Controller {
+  constructor() {
+    // main element
+    const el = document.createElement('div')
+    el.id = 'playback'
+    document.body.appendChild(el)
+    // wrapper element
+    const wrapper = document.createElement('div')
+    wrapper.classList.add('wrapper')
+    el.appendChild(wrapper)
+    // toggle button for p5 loop animation
+    const button = document.createElement('button')
+    button.classList.add('toggle-button')
+    button.addEventListener('click', e => {
+      e.preventDefault()
+      const paused = 'is-paused'
+      el.classList.toggle(paused)
+      if (el.classList.contains(paused)) {
+        noLoop()
+      } else {
+        loop()
+      }
+    })
+    el.appendChild(button)
+    // visibility
+    document.addEventListener('keydown', e => {
+      switch (e.key) {
+        // save image
+        case 's':
+          const keys = window.location.href.split('/').reverse()
+          const index = keys.findIndex(val => val)
+          saveCanvas(keys[index], 'png')
+          break
+        // toggle visibility
+        case 'h':
+          document.body.classList.toggle('is-hidden')
+          break
+        default:
+          break
+      }
+    })
+  }
+}
+
+
+/***/ }),
+
+/***/ "./utils/ReadMe.js":
+/*!*************************!*\
+  !*** ./utils/ReadMe.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * code visualer
+ */
+
+const showdown = __webpack_require__(/*! showdown */ "./node_modules/showdown/dist/showdown.js")
+const converter = new showdown.Converter({ openLinksInNewWindow: true })
+
+const hljs = __webpack_require__(/*! highlight.js/lib/highlight.js */ "./node_modules/highlight.js/lib/highlight.js")
+hljs.registerLanguage('javascript', __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js"))
+__webpack_require__(/*! highlight.js/styles/atom-one-light.css */ "./node_modules/highlight.js/styles/atom-one-light.css")
+
+module.exports = class ReadMe {
+  constructor(paths) {
+    this.paths = paths
+    // main element
+    this.el = document.createElement('div')
+    this.el.id = 'readme'
+    document.body.appendChild(this.el)
+    // wrapper element
+    this.wrapper = document.createElement('div')
+    this.wrapper.classList.add('wrapper')
+    this.el.appendChild(this.wrapper)
+    // toggle button
+    const button = document.createElement('button')
+    button.classList.add('toggle-button')
+    button.addEventListener('click', e => {
+      e.preventDefault()
+      this.el.classList.toggle('is-show')
+    })
+    this.el.appendChild(button)
+    // start load files
+    this.load()
+  }
+  getJSText(data) {
+    const spliceList = [
+      '//',
+      'let stats',
+      'stats = new Stats',
+      'new ReadMe',
+      'new Controller',
+      'stats.update'
+    ]
+    const array = data.split('\n')
+    for (let count = array.length - 1; count > -1; count--) {
+      const val = array[count]
+      if (spliceList.find(list => val.indexOf(list) !== -1)) {
+        array.splice(count, 1)
+      }
+    }
+    return array.join('\n')
+  }
+  render(items) {
+    items.forEach(({ type, data, title }) => {
+      if (type === 'md') {
+        const markdown = document.createElement('div')
+        markdown.classList.add('markdown')
+        markdown.innerHTML = converter.makeHtml(data)
+        this.wrapper.appendChild(markdown)
+      } else {
+        // header
+        const header = document.createElement('h3')
+        header.classList.add('title')
+        header.innerHTML = title
+        this.wrapper.appendChild(header)
+        // highlight code
+        const pre = document.createElement('pre')
+        const code = document.createElement('code')
+        code.classList.add(type)
+        code.innerHTML = type === 'js' ? this.getJSText(data) : data
+        pre.appendChild(code)
+        this.wrapper.appendChild(pre)
+        hljs.highlightBlock(code)
+      }
+    })
+  }
+  /**
+   * fetch files
+   * @see https://developer.mozilla.org/en-US/docs/Web/API/Response
+   */
+  async load() {
+    let items
+    const types = []
+    try {
+      const response = await Promise.all(this.paths.map(path => fetch(path)))
+      items = await Promise.all(response.map((res, index) => {
+        const arr = res.url.split('.')
+        const type = arr[arr.length - 1]
+        types[index] = type
+        switch (type) {
+          case 'json':
+            return res.json()
+          default:
+            return res.text()
+        }
+      }))
+    } catch (error) {
+      throw new Error(error)
+    }
+    if (!items) { return }
+    this.render(items.map((data, index) => ({ type: types[index], data, index, title: this.paths[index] })))
+  }
+}
+
+
+/***/ }),
+
+/***/ "./utils/Stats.js":
+/*!************************!*\
+  !*** ./utils/Stats.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = class Stats {
+  constructor() {
+    const main = document.createElement('div')
+    main.setAttribute('id', 'stats')
+    this.el = document.createElement('span')
+    main.appendChild(this.el)
+    document.body.appendChild(main)
+  }
+  update(val) {
+    this.el.innerHTML = val
+  }
+}
+
+
+/***/ }),
+
+/***/ "./utils/css/default.styl":
+/*!********************************!*\
+  !*** ./utils/css/default.styl ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./utils/css/default.styl");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./utils/index.js":
+/*!************************!*\
+  !*** ./utils/index.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./css/default.styl */ "./utils/css/default.styl")
+window.Stats = __webpack_require__(/*! ./Stats */ "./utils/Stats.js")
+window.ReadMe = __webpack_require__(/*! ./ReadMe */ "./utils/ReadMe.js")
+window.Controller = __webpack_require__(/*! ./Controller */ "./utils/Controller.js")
 
 
 /***/ })

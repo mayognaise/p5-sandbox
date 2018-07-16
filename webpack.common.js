@@ -2,11 +2,11 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    utils: './gh-pages/utils/index.js',
+    utils: './utils/index.js',
     index: './scripts/build-index/base.js'
   },
   output: {
-    path: path.resolve(__dirname, 'gh-pages/dist')
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
