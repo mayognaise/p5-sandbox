@@ -6267,30 +6267,27 @@ module.exports = function (css) {
 /**
  * Controller
  */
+
+const paused = 'is-paused'
+
 module.exports = class Controller {
   constructor() {
     // main element
-    const el = document.createElement('div')
-    el.id = 'playback'
-    document.body.appendChild(el)
+    this.el = document.createElement('div')
+    this.el.id = 'playback'
+    document.body.appendChild(this.el)
     // wrapper element
     const wrapper = document.createElement('div')
     wrapper.classList.add('wrapper')
-    el.appendChild(wrapper)
+    this.el.appendChild(wrapper)
     // toggle button for p5 loop animation
     const button = document.createElement('button')
     button.classList.add('toggle-button')
     button.addEventListener('click', e => {
       e.preventDefault()
-      const paused = 'is-paused'
-      el.classList.toggle(paused)
-      if (el.classList.contains(paused)) {
-        noLoop()
-      } else {
-        loop()
-      }
+      this.togglePlayback()
     })
-    el.appendChild(button)
+    this.el.appendChild(button)
     // visibility
     document.addEventListener('keydown', e => {
       switch (e.key) {
@@ -6304,10 +6301,22 @@ module.exports = class Controller {
         case 'h':
           document.body.classList.toggle('is-hidden')
           break
+        // toggle playback
+        case 'p':
+          this.togglePlayback()
+          break
         default:
           break
       }
     })
+  }
+  togglePlayback() {
+    this.el.classList.toggle(paused)
+    if (this.el.classList.contains(paused)) {
+      noLoop()
+    } else {
+      loop()
+    }
   }
 }
 
@@ -6332,6 +6341,8 @@ const hljs = __webpack_require__(/*! highlight.js/lib/highlight.js */ "./node_mo
 hljs.registerLanguage('javascript', __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js"))
 __webpack_require__(/*! highlight.js/styles/atom-one-light.css */ "./node_modules/highlight.js/styles/atom-one-light.css")
 
+const show = 'is-show'
+
 module.exports = class ReadMe {
   constructor(paths) {
     this.paths = paths
@@ -6348,7 +6359,12 @@ module.exports = class ReadMe {
     button.classList.add('toggle-button')
     button.addEventListener('click', e => {
       e.preventDefault()
-      this.el.classList.toggle('is-show')
+      this.el.classList.toggle(show)
+    })
+    document.addEventListener('keydown', e => {
+      if (e.key === 'i') {
+        this.el.classList.toggle(show)
+      }
     })
     this.el.appendChild(button)
     // start load files

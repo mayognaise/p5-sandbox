@@ -9,6 +9,8 @@ const hljs = require('highlight.js/lib/highlight.js')
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))
 require('highlight.js/styles/atom-one-light.css')
 
+const show = 'is-show'
+
 module.exports = class ReadMe {
   constructor(paths) {
     this.paths = paths
@@ -25,7 +27,12 @@ module.exports = class ReadMe {
     button.classList.add('toggle-button')
     button.addEventListener('click', e => {
       e.preventDefault()
-      this.el.classList.toggle('is-show')
+      this.el.classList.toggle(show)
+    })
+    document.addEventListener('keydown', e => {
+      if (e.key === 'i') {
+        this.el.classList.toggle(show)
+      }
     })
     this.el.appendChild(button)
     // start load files
