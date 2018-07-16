@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./docs/utils/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./gh-pages/utils/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./docs/utils/Controller.js":
-/*!**********************************!*\
-  !*** ./docs/utils/Controller.js ***!
-  \**********************************/
+/***/ "./gh-pages/utils/Controller.js":
+/*!**************************************!*\
+  !*** ./gh-pages/utils/Controller.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -143,10 +143,10 @@ module.exports = class Controller {
 
 /***/ }),
 
-/***/ "./docs/utils/ReadMe.js":
-/*!******************************!*\
-  !*** ./docs/utils/ReadMe.js ***!
-  \******************************/
+/***/ "./gh-pages/utils/ReadMe.js":
+/*!**********************************!*\
+  !*** ./gh-pages/utils/ReadMe.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -256,10 +256,10 @@ module.exports = class ReadMe {
 
 /***/ }),
 
-/***/ "./docs/utils/Stats.js":
-/*!*****************************!*\
-  !*** ./docs/utils/Stats.js ***!
-  \*****************************/
+/***/ "./gh-pages/utils/Stats.js":
+/*!*********************************!*\
+  !*** ./gh-pages/utils/Stats.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -279,15 +279,15 @@ module.exports = class Stats {
 
 /***/ }),
 
-/***/ "./docs/utils/css/default.styl":
-/*!*************************************!*\
-  !*** ./docs/utils/css/default.styl ***!
-  \*************************************/
+/***/ "./gh-pages/utils/css/default.styl":
+/*!*****************************************!*\
+  !*** ./gh-pages/utils/css/default.styl ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./docs/utils/css/default.styl");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/stylus-loader!./default.styl */ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./gh-pages/utils/css/default.styl");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -309,17 +309,17 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./docs/utils/index.js":
-/*!*****************************!*\
-  !*** ./docs/utils/index.js ***!
-  \*****************************/
+/***/ "./gh-pages/utils/index.js":
+/*!*********************************!*\
+  !*** ./gh-pages/utils/index.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./css/default.styl */ "./docs/utils/css/default.styl")
-window.Stats = __webpack_require__(/*! ./Stats */ "./docs/utils/Stats.js")
-window.ReadMe = __webpack_require__(/*! ./ReadMe */ "./docs/utils/ReadMe.js")
-window.Controller = __webpack_require__(/*! ./Controller */ "./docs/utils/Controller.js")
+__webpack_require__(/*! ./css/default.styl */ "./gh-pages/utils/css/default.styl")
+window.Stats = __webpack_require__(/*! ./Stats */ "./gh-pages/utils/Stats.js")
+window.ReadMe = __webpack_require__(/*! ./ReadMe */ "./gh-pages/utils/ReadMe.js")
+window.Controller = __webpack_require__(/*! ./Controller */ "./gh-pages/utils/Controller.js")
 
 
 /***/ }),
@@ -343,10 +343,10 @@ exports.push([module.i, "/*\n\nAtom One Light by Daniel Gamage\nOriginal One Lig
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./docs/utils/css/default.styl":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./docs/utils/css/default.styl ***!
-  \********************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./gh-pages/utils/css/default.styl":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/stylus-loader!./gh-pages/utils/css/default.styl ***!
+  \************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
