@@ -16,7 +16,7 @@ function setup() {
   }
   // for debug
   stats = new Stats()
-  new Playback()
+  new Controller()
   new ReadMe(['README.md', 'sketch.js'])
 }
 

@@ -6,7 +6,7 @@ function setup() {
     stars.push(new Star())
   }
   // for debug
-  new Playback()
+  new Controller()
   new ReadMe(['README.md', 'sketch.js', 'Star.js'])
 }
 

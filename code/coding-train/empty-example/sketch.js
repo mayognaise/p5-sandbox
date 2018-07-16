@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight)
   // for debug
-  new Playback()
+  new Controller()
   new ReadMe(['README.md', 'sketch.js'])
 }
 

@@ -8,7 +8,7 @@ function setup() {
   sponge.push(new Box(0, 0, 0, size))
   // for debug
   stats = new Stats()
-  new Playback()
+  new Controller()
   new ReadMe(['README.md', 'sketch.js', 'Box.js'])
 }
 

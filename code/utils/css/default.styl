@@ -20,6 +20,8 @@ canvas
   padding 5px
   position fixed
   left 0
+  .is-hidden &
+    display none
 
 .toggle-button
   background black
@@ -47,6 +49,8 @@ canvas
     right 0
     top 0
     width calc(100% - 50px)
+  .is-hidden &
+    display none
   &:not(.is-show)
     .wrapper
       display none
@@ -88,3 +92,5 @@ canvas
     .toggle-button
       &:after
         content: '▶'
+  .is-hidden &
+    display none

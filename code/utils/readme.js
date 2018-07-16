@@ -37,7 +37,7 @@ module.exports = class ReadMe {
       'let stats',
       'stats = new Stats',
       'new ReadMe',
-      'new Playback',
+      'new Controller',
       'stats.update'
     ]
     const array = data.split('\n')

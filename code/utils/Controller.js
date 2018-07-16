@@ -1,7 +1,7 @@
 /**
- * Playback for p5 loop animation
+ * Controller
  */
-module.exports = class Playback {
+module.exports = class Controller {
   constructor() {
     // main element
     const el = document.createElement('div')
@@ -11,7 +11,7 @@ module.exports = class Playback {
     const wrapper = document.createElement('div')
     wrapper.classList.add('wrapper')
     el.appendChild(wrapper)
-    // toggle button
+    // toggle button for p5 loop animation
     const button = document.createElement('button')
     button.classList.add('toggle-button')
     button.addEventListener('click', e => {
@@ -25,5 +25,19 @@ module.exports = class Playback {
       }
     })
     el.appendChild(button)
+    // visibility
+    document.addEventListener('keydown', e => {
+      switch (e.key) {
+        // save image
+        case 's':
+          saveCanvas()
+          break
+        case 'h':
+          document.body.classList.toggle('is-hidden')
+          break
+        default:
+          break
+      }
+    })
   }
 }
