@@ -1,7 +1,7 @@
 ## Generative Design
 
 ### Colors
-- #P1_0_01 changing colors and size by moving the mouse [demo][P1_0_01-demo] [code][P1_0_01-code]
+- #P1\_0\_01 changing colors and size by moving the mouse [demo][P1_0_01-demo] [code][P1_0_01-code]
 
 [Reference source][reference] by [Generative Design][generative-gestaltung]
 

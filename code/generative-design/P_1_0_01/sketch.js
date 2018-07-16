@@ -8,6 +8,7 @@ function setup() {
   rectMode(CENTER)
   noStroke()
   // for debug
+  new Controller()
   new ReadMe(['README.md', 'sketch.js'])
 }
 

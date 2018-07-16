@@ -1,4 +1,76 @@
 body
-  font-family helvetica, arial
+  font-family 'Abel', sans-serif
   margin 0
   padding 0
+  color black
+  -webkit-print-color-adjust exact
+
+.container
+  width 80%
+  margin auto
+  min-width 288px
+  max-width 1024px
+  padding-bottom 5rem
+
+h1
+  font-size 32px
+
+h2
+  font-size 28px
+  margin-top 3rem
+
+h3
+  font-size 21px
+
+$link = rgb(0, 0, 255)
+$linkColor = rgb(255, 255, 0)
+a
+  text-decoration none
+  color: $link
+  background linear-gradient(to bottom, transparent, $link) no-repeat 0 100%
+  background-size 100% 1px
+  outline 0
+  &:focus
+    // transition background-size .1s ease-in-out, color .1s ease-in-out
+    background linear-gradient(to bottom, $link, $link) no-repeat 0 100%
+    background-size 100% 100%
+    color: $linkColor
+
+ul
+  list-style none
+  padding-left 0
+  display flex
+  flex-wrap wrap
+  margin-left -.5rem
+  margin-right -.5rem
+
+$iconSize = 20px
+li
+  padding-bottom .5rem
+  margin .5rem
+  position relative
+  margin-top: 'calc(%s + 1rem)' % $iconSize
+  background no-repeat 0 0
+  background-size contain
+  width calc(50% - 1rem)
+  padding-top calc(50% - .5rem)
+  &:nth-child(1)
+  &:nth-child(2)
+    margin-top 0
+  @media print, (min-width: 768px)
+    width calc(33.3% - 1rem)
+    padding-top calc(33.3% - .5rem)
+    &:nth-child(3)
+      margin-top 0
+  @media print, (min-width: 1024px)
+    width calc(25% - 1rem)
+    padding-top calc(25% - .5rem)
+    &:nth-child(4)
+      margin-top 0
+  @media print, (min-width: 1280px)
+    width calc(20% - 1rem)
+    padding-top calc(20% - .5rem)
+    &:nth-child(5)
+      margin-top 0
+  a
+    display block

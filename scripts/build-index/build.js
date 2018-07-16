@@ -18,10 +18,6 @@ const readmeHTML = converter.makeHtml(readmeData)
 const overwrite = '<!-- markdown -->'
 const baseHTML = baseData.replace(overwrite, readmeHTML)
 
-fs.writeFile(indexURL, baseHTML, function (err) {
-  if (err) {
-    return console.log(err)
-  }
+const err = fs.writeFileSync(indexURL, baseHTML)
 
-  console.log("The file was saved!")
-})
+console.log(err || 'file was saved!')

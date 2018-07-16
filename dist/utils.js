@@ -155,7 +155,10 @@ module.exports = class Controller {
  */
 
 const showdown = __webpack_require__(/*! showdown */ "./node_modules/showdown/dist/showdown.js")
-const converter = new showdown.Converter({ openLinksInNewWindow: true })
+const converter = new showdown.Converter({
+  openLinksInNewWindow: true,
+  tables: true
+})
 
 const hljs = __webpack_require__(/*! highlight.js/lib/highlight.js */ "./node_modules/highlight.js/lib/highlight.js")
 hljs.registerLanguage('javascript', __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js"))
