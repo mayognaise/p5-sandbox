@@ -1,4 +1,5 @@
-$toggleButtonSize = 36px
+$toggleButtonSize = 64px
+$toggleButtonDesktopSize = 36px
 
 html
 body
@@ -29,6 +30,9 @@ canvas
   position fixed
   text-align center
   width: $toggleButtonSize
+  @media (min-width: 768px)
+    height: $toggleButtonDesktopSize
+    width: $toggleButtonDesktopSize
   &:focus
     background yellow
     color black
@@ -84,6 +88,8 @@ canvas
     right 0
     &:after
       content: 'Ⅱ'
+    @media (min-width: 768px)
+      bottom: $toggleButtonDesktopSize + 1
   &.is-paused
     .toggle-button
       &:after
