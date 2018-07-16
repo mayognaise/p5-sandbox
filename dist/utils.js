@@ -125,8 +125,11 @@ module.exports = class Controller {
       switch (e.key) {
         // save image
         case 's':
-          saveCanvas()
+          const keys = window.location.href.split('/').reverse()
+          const index = keys.findIndex(val => val)
+          saveCanvas(keys[index], 'png')
           break
+        // toggle visibility
         case 'h':
           document.body.classList.toggle('is-hidden')
           break
