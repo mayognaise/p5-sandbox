@@ -1,9 +1,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: './code/utils/index.js',
+  entry: {
+    utils: './code/utils/index.js',
+    index: './scripts/build-index/base.js'
+  },
   output: {
-    filename: 'utils.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
