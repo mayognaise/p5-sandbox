@@ -4,7 +4,7 @@
 
 ---
 
-[p5-sandbox]: https://github.com/mayognaise/p5-sandbox
+[p5-sandbox]: https://mayognaise.github.io/p5-sandbox
 [P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/P_1_0_01
 [P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/P_1_0_01
 [P1_0_01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01

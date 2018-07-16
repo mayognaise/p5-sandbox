@@ -6394,6 +6394,18 @@ module.exports = class ReadMe {
         markdown.classList.add('markdown')
         markdown.innerHTML = converter.makeHtml(data)
         this.wrapper.appendChild(markdown)
+        // for development
+        if (window.location.port === '4649') {
+          const linkItems = markdown.querySelectorAll('a')
+          for (var item of linkItems) {
+            const href = item.getAttribute('href')
+            const link = 'https://mayognaise.github.io/p5-sandbox'
+            if (href.indexOf(link) === 0) {
+              item.setAttribute('href', href === link ? '/' : href.replace(link, ''))
+              item.removeAttribute('target')
+            }
+          }
+        }
       } else {
         // header
         const header = document.createElement('h3')

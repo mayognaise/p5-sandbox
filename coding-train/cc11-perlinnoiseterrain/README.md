@@ -8,7 +8,7 @@
 
 ---
 
-[p5-sandbox]: https://github.com/mayognaise/p5-sandbox
+[p5-sandbox]: https://mayognaise.github.io/p5-sandbox
 [cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc11-perlinnoiseterrain
 [cc11-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc11-perlinnoiseterrain
 [cc11-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html

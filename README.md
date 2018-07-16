@@ -21,7 +21,7 @@ Any [Processing][processing] projects are converted as p5.
 
 [@mayognaise][mayognaise]
 
-[p5-sandbox]: https://github.com/mayognaise/p5-sandbox
+[p5-sandbox]: https://mayognaise.github.io/p5-sandbox
 [p5-js]: https://p5js.org
 [processing]: https://processing.org/
 [coding-train]: http://thecodingtrain.com

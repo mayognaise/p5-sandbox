@@ -719,12 +719,12 @@ const init = () => {
     item.addEventListener('click', e => e.currentTarget.blur())
   }
   // for development
-  if (window.location.port === '3000') {
+  if (window.location.port === '4649') {
     for (var item of linkItems) {
       const href = item.getAttribute('href')
       const link = 'https://mayognaise.github.io/p5-sandbox'
       if (href.indexOf(link) === 0) {
-        item.setAttribute('href', href.replace(link, ''))
+        item.setAttribute('href', href === link ? '/' : href.replace(link, ''))
         item.removeAttribute('target')
       }
     }
