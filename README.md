@@ -1,8 +1,8 @@
 # [p5 Sandbox][p5-sandbox]
 
-This is a study for p5. They are mainly by open-sourced projects.
+This is a study for p5. They are mainly based on open-sourced projects.
 
-## [Coding Train][coding-train]
+## [Coding Train][coding-train] by [Daniel Shiffman][daniel-shiffman]
 
 ### [Coding Challenge][coding-challenge]
 
@@ -17,6 +17,7 @@ This is a study for p5. They are mainly by open-sourced projects.
 
 [p5-sandbox]: https://github.com/mayognaise/p5-sandbox
 [coding-train]: http://thecodingtrain.com
+[daniel-shiffman]: https://shiffman.net
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
 [generative-design]: http://www.generative-gestaltung.de/2
 
