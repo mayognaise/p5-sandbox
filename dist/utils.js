@@ -117,7 +117,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Abel);", ""]);
 
 // module
-exports.push([module.i, "html,\nbody {\n  font-size: 1rem;\n}\nbody {\n  -webkit-print-color-adjust: exact;\n  color: #000;\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  background: repeating-linear-gradient(45deg, #ff0, #ff0 1px, #fff 1px, #fff 5px);\n  color: #00f;\n  outline: 0;\n  text-decoration: none;\n}\na:focus {\n  background: #00f;\n  color: #ff0;\n}\n@media (hover: hover) {\n  a:hover {\n    background: #00f;\n    color: #ff0;\n  }\n}\nhr {\n  border: solid 0.5px #000;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  font-size: 1rem;\n}\nbody {\n  -webkit-print-color-adjust: exact;\n  color: #000;\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  background: repeating-linear-gradient(45deg, #ff0, #ff0 1px, #fff 1px, #fff 5px);\n  color: #00f;\n  outline: 0;\n  text-decoration: none;\n}\na:focus,\na:active {\n  background: #00f;\n  color: #ff0;\n}\n@media (hover: hover) {\n  a:hover {\n    background: #00f;\n    color: #ff0;\n  }\n}\nhr {\n  border: solid 0.5px #000;\n}\n", ""]);
 
 // exports
 
@@ -136,7 +136,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "html,\nbody {\n  overflow: hidden !important;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n.is-hidden #stats {\n  display: none;\n}\n.toggle-button {\n  background: #000;\n  border: none;\n  border-radius: 0;\n  color: #fff;\n  font-family: inherit;\n  font-size: larger;\n  height: 64px;\n  position: fixed;\n  text-align: center;\n  width: 64px;\n}\n@media (min-width: 768px) {\n  .toggle-button {\n    height: 36px;\n    width: 36px;\n  }\n}\n.toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n#readme .wrapper {\n  -webkit-overflow-scrolling: touch;\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n.is-hidden #readme {\n  display: none;\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme .markdown {\n  padding: 1rem;\n}\n#readme .markdown > *:first-child {\n  margin-top: 0;\n}\n#readme .markdown ul {\n  list-style: none;\n  padding-left: 0;\n}\n#readme .markdown ul a {\n  margin-left: 0.5rem;\n}\n#readme .title {\n  margin: 0;\n  padding: 0 1rem;\n}\n#readme .title:first-child {\n  padding-top: 1rem;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1rem 1rem 2rem;\n}\n#readme .toggle-button {\n  bottom: 0;\n  right: 0;\n}\n#readme .toggle-button:after {\n  content: '\\24D8';\n}\n#readme.is-show .toggle-button:after {\n  content: '\\2715';\n}\n#playback .toggle-button {\n  bottom: 65px;\n  right: 0;\n}\n#playback .toggle-button:after {\n  content: '\\2161';\n}\n@media (min-width: 768px) {\n  #playback .toggle-button {\n    bottom: 37px;\n  }\n}\n#playback.is-paused .toggle-button:after {\n  content: '\\25B8';\n}\n.is-hidden #playback {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  overflow: hidden !important;\n}\ncanvas {\n  position: fixed;\n  vertical-align: top;\n}\n#stats {\n  background: #000;\n  bottom: 0;\n  color: #0f0;\n  padding: 5px;\n  position: fixed;\n  left: 0;\n}\n.is-hidden #stats {\n  display: none;\n}\n.toggle-button {\n  background: #000;\n  border: none;\n  border-radius: 0;\n  color: #fff;\n  font-family: inherit;\n  font-size: larger;\n  height: 64px;\n  position: fixed;\n  text-align: center;\n  width: 64px;\n}\n@media (min-width: 768px) {\n  .toggle-button {\n    height: 36px;\n    width: 36px;\n  }\n}\n.toggle-button:focus {\n  background: #ff0;\n  color: #000;\n  outline: 0;\n}\n#readme .wrapper {\n  -webkit-overflow-scrolling: touch;\n  background: #fafafa;\n  height: 100%;\n  overflow-x: hidden;\n  overflow-y: auto;\n  position: fixed;\n  right: 0;\n  top: 0;\n  width: calc(100% - 50px);\n}\n.is-hidden #readme {\n  display: none;\n}\n#readme:not(.is-show) .wrapper {\n  display: none;\n}\n#readme.is-show .cover {\n  position: fixed;\n  width: 50px;\n  height: 100%;\n  background: rgba(0,0,0,0.5);\n}\n#readme .markdown {\n  padding: 1rem;\n}\n#readme .markdown > *:first-child {\n  margin-top: 0;\n}\n#readme .markdown ul {\n  list-style: none;\n  padding-left: 0;\n}\n#readme .markdown ul a {\n  margin-left: 0.5rem;\n}\n#readme .title {\n  margin: 0;\n  padding: 0 1rem;\n}\n#readme .title:first-child {\n  padding-top: 1rem;\n}\n#readme pre {\n  margin: 0;\n}\n#readme code {\n  padding: 1rem 1rem 2rem;\n}\n#readme .toggle-button {\n  bottom: 0;\n  right: 0;\n}\n#readme .toggle-button:after {\n  content: '\\24D8';\n}\n#readme.is-show .toggle-button:after {\n  content: '\\2715';\n}\n#playback .toggle-button {\n  bottom: 65px;\n  right: 0;\n}\n#playback .toggle-button:after {\n  content: '\\2161';\n}\n@media (min-width: 768px) {\n  #playback .toggle-button {\n    bottom: 37px;\n  }\n}\n#playback.is-paused .toggle-button:after {\n  content: '\\25B8';\n}\n.is-hidden #playback {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -6341,8 +6341,6 @@ const hljs = __webpack_require__(/*! highlight.js/lib/highlight.js */ "./node_mo
 hljs.registerLanguage('javascript', __webpack_require__(/*! highlight.js/lib/languages/javascript */ "./node_modules/highlight.js/lib/languages/javascript.js"))
 __webpack_require__(/*! highlight.js/styles/atom-one-light.css */ "./node_modules/highlight.js/styles/atom-one-light.css")
 
-const show = 'is-show'
-
 module.exports = class ReadMe {
   constructor(paths) {
     this.paths = paths
@@ -6355,20 +6353,21 @@ module.exports = class ReadMe {
     this.wrapper.classList.add('wrapper')
     this.el.appendChild(this.wrapper)
     // toggle button
+    const cover = document.createElement('div')
+    cover.classList.add('cover')
     const button = document.createElement('button')
     button.classList.add('toggle-button')
-    button.addEventListener('click', e => {
-      e.preventDefault()
-      this.el.classList.toggle(show)
-    })
-    document.addEventListener('keydown', e => {
-      if (e.key === 'i') {
-        this.el.classList.toggle(show)
-      }
-    })
+    cover.addEventListener('click', e => this.toggleVisibility(e))
+    button.addEventListener('click', e => this.toggleVisibility(e))
+    document.addEventListener('keydown', e => e.key === 'i' && this.toggleVisibility(e))
+    this.el.appendChild(cover)
     this.el.appendChild(button)
     // start load files
     this.load()
+  }
+  toggleVisibility(e) {
+    e.preventDefault()
+    this.el.classList.toggle('is-show')
   }
   getJSText(data) {
     const spliceList = [

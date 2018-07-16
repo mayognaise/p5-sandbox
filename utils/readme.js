@@ -9,8 +9,6 @@ const hljs = require('highlight.js/lib/highlight.js')
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))
 require('highlight.js/styles/atom-one-light.css')
 
-const show = 'is-show'
-
 module.exports = class ReadMe {
   constructor(paths) {
     this.paths = paths
@@ -23,20 +21,21 @@ module.exports = class ReadMe {
     this.wrapper.classList.add('wrapper')
     this.el.appendChild(this.wrapper)
     // toggle button
+    const cover = document.createElement('div')
+    cover.classList.add('cover')
     const button = document.createElement('button')
     button.classList.add('toggle-button')
-    button.addEventListener('click', e => {
-      e.preventDefault()
-      this.el.classList.toggle(show)
-    })
-    document.addEventListener('keydown', e => {
-      if (e.key === 'i') {
-        this.el.classList.toggle(show)
-      }
-    })
+    cover.addEventListener('click', e => this.toggleVisibility(e))
+    button.addEventListener('click', e => this.toggleVisibility(e))
+    document.addEventListener('keydown', e => e.key === 'i' && this.toggleVisibility(e))
+    this.el.appendChild(cover)
     this.el.appendChild(button)
     // start load files
     this.load()
+  }
+  toggleVisibility(e) {
+    e.preventDefault()
+    this.el.classList.toggle('is-show')
   }
   getJSText(data) {
     const spliceList = [

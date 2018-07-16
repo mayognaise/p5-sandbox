@@ -117,7 +117,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Abel);", ""]);
 
 // module
-exports.push([module.i, "html,\nbody {\n  font-size: 1rem;\n}\nbody {\n  -webkit-print-color-adjust: exact;\n  color: #000;\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  background: repeating-linear-gradient(45deg, #ff0, #ff0 1px, #fff 1px, #fff 5px);\n  color: #00f;\n  outline: 0;\n  text-decoration: none;\n}\na:focus {\n  background: #00f;\n  color: #ff0;\n}\n@media (hover: hover) {\n  a:hover {\n    background: #00f;\n    color: #ff0;\n  }\n}\nhr {\n  border: solid 0.5px #000;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  font-size: 1rem;\n}\nbody {\n  -webkit-print-color-adjust: exact;\n  color: #000;\n  font-family: 'Abel', sans-serif;\n  margin: 0;\n  padding: 0;\n}\nh1 {\n  font-size: 32px;\n}\nh2 {\n  font-size: 28px;\n  margin-top: 3rem;\n}\nh3 {\n  font-size: 21px;\n}\na {\n  background: repeating-linear-gradient(45deg, #ff0, #ff0 1px, #fff 1px, #fff 5px);\n  color: #00f;\n  outline: 0;\n  text-decoration: none;\n}\na:focus,\na:active {\n  background: #00f;\n  color: #ff0;\n}\n@media (hover: hover) {\n  a:hover {\n    background: #00f;\n    color: #ff0;\n  }\n}\nhr {\n  border: solid 0.5px #000;\n}\n", ""]);
 
 // exports
 

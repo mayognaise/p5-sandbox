@@ -38,6 +38,7 @@ canvas
     color black
     outline 0
 
+$readmeOffsetWidth = 50px
 #readme
   .wrapper
     -webkit-overflow-scrolling touch
@@ -48,12 +49,18 @@ canvas
     position fixed
     right 0
     top 0
-    width calc(100% - 50px)
+    width: 'calc(100% - %s)' % $readmeOffsetWidth
   .is-hidden &
     display none
   &:not(.is-show)
     .wrapper
       display none
+  &.is-show
+    .cover
+      position fixed
+      width: $readmeOffsetWidth
+      height 100%
+      background rgba(0, 0, 0, .5)
   .markdown
     padding 1rem
     > *:first-child
