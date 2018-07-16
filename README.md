@@ -1,6 +1,6 @@
 # [p5 Sandbox][p5-sandbox]
 
-This is a study for p5. They are mainly based on open-sourced projects.
+This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projects.
 
 ## [Coding Train][coding-train] by [Daniel Shiffman][daniel-shiffman]
 
@@ -16,12 +16,12 @@ This is a study for p5. They are mainly based on open-sourced projects.
 - #P1\_0\_01 Changing colors and size by moving the mouse [demo][P1_0_01-demo] [code][P1_0_01-code] [reference][P1_0_01-reference]
 
 [p5-sandbox]: https://github.com/mayognaise/p5-sandbox
+[p5-js]: https://p5js.org
 [coding-train]: http://thecodingtrain.com
 [daniel-shiffman]: https://shiffman.net
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
 [generative-design]: http://www.generative-gestaltung.de/2
 
-[cc1-image]: https://mayognaise.github.io/p5-sandbox/assets/images/kitten.jpg
 [cc1-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc1-starfield
 [cc1-reference]: http://thecodingtrain.com/CodingChallenges/001-starfield.html
 [cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc1-starfield
