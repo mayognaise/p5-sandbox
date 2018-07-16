@@ -30,10 +30,13 @@ a
   color: $theme
   outline 0
   text-decoration none
-  &:hover
   &:focus
     background: $theme
     color: $themeInvert
+  @media (hover:hover)
+    &:hover
+      background: $theme
+      color: $themeInvert
 
 hr
   border solid .5px black
