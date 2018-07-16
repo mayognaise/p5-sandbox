@@ -4,6 +4,8 @@ This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projec
 
 ## [Coding Train][coding-train] by [Daniel Shiffman][daniel-shiffman]
 
+Any [Processing][processing] projects are converted as p5.
+
 ### [Coding Challenge][coding-challenge]
 - \#1: Starfield [demo][cc1-demo] [code][cc1-code] [reference][cc1-ref]
 
@@ -21,6 +23,7 @@ This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projec
 
 [p5-sandbox]: https://github.com/mayognaise/p5-sandbox
 [p5-js]: https://p5js.org
+[processing]: https://processing.org/
 [coding-train]: http://thecodingtrain.com
 [daniel-shiffman]: https://shiffman.net
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
