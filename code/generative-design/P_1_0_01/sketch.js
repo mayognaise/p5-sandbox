@@ -6,8 +6,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
   colorMode(HSB, h, s, b)
   rectMode(CENTER)
-  // for debug
   noStroke()
+  // for debug
   new ReadMe(['README.md', 'sketch.js'])
 }
 

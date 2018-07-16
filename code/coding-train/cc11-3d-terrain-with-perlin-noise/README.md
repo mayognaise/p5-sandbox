@@ -3,7 +3,7 @@
 ### Coding Challenge
 - #11: 3D Terrain Generation with Perlin Noise [demo][cc11-demo] [code][cc11-code]
 
-[Reference video][reference] by [Generative Design][coding-train]
+[Reference video][reference] by [Coding Train][coding-train]
 
 ### Known issue
 

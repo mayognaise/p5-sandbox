@@ -5,10 +5,6 @@ let w, h
 let cols, rows
 let flying = 0
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight)
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL)
   w = windowWidth * 2
@@ -47,4 +43,8 @@ function draw() {
     endShape(CLOSE)
   }
   stats.update(floor(frameRate()))
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight)
 }
