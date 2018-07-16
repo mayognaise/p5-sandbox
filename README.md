@@ -22,15 +22,15 @@ This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projec
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
 [generative-design]: http://www.generative-gestaltung.de/2
 
-[cc1-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc1-starfield
+[cc1-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc1-starfield
 [cc1-reference]: http://thecodingtrain.com/CodingChallenges/001-starfield.html
-[cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc1-starfield
-[cc2-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc2-menger-sponge-fractal
-[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc2-menger-sponge-fractal
+[cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc1-starfield
+[cc2-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge-fractal
+[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc2-menger-sponge-fractal
 [cc2-reference]: http://thecodingtrain.com/CodingChallenges/002-mengersponge.html
-[cc11-demo]: https://mayognaise.github.io/p5-sandbox/code/coding-train/cc11-3d-terrain-with-perlin-noise
-[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/coding-train/cc11-3d-terrain-with-perlin-noise
+[cc11-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc11-3d-terrain-with-perlin-noise
+[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc11-3d-terrain-with-perlin-noise
 [cc11-reference]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
-[P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/code/generative-design/P_1_0_01
-[P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/generative-design/P_1_0_01
+[P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/P_1_0_01
+[P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/P_1_0_01
 [P1_0_01-reference]: https://editor.p5js.org/generative-design/sketches/P_1_0_01

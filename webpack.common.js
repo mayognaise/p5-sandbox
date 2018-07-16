@@ -2,11 +2,11 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    utils: './code/utils/index.js',
+    utils: './docs/utils/index.js',
     index: './scripts/build-index/base.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs/dist')
   },
   module: {
     rules: [

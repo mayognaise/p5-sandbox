@@ -9,7 +9,7 @@ const converter = new showdown.Converter({ openLinksInNewWindow: true })
 
 const readmeURL = path.resolve(__dirname, '../../README.md')
 const baseURL = path.resolve(__dirname, './base.html')
-const indexURL = path.resolve(__dirname, '../../index.html')
+const indexURL = path.resolve(__dirname, '../../docs/index.html')
 
 const readmeData = fs.readFileSync(readmeURL, 'utf8')
 const baseData = fs.readFileSync(baseURL, 'utf8')

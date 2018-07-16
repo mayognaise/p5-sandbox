@@ -9,5 +9,5 @@
 
 [reference]: http://alpha.editor.p5js.org/generative-design/sketches/P_1_0_01
 [generative-gestaltung]: http://www.generative-gestaltung.de/2/
-[P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/code/generative-design/P_1_0_01
-[P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/code/generative-design/P_1_0_01
+[P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/P_1_0_01
+[P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/P_1_0_01
