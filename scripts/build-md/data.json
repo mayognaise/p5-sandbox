@@ -1,0 +1,89 @@
+{
+  "groups": {
+    "coding-train": {
+      "name": "Coding Train",
+      "author": "daniel-shiffman"
+    },
+    "generative-design": {
+      "name": "Generative Design",
+      "author": null
+    }
+  },
+  "categories": {
+    "coding-challenge": {
+      "name": "Coding Challenge"
+    },
+    "p1-color": {
+      "name": "P.1. Color"
+    }
+  },
+  "authors": {
+    "daniel-shiffman": {
+      "name": "Daniel Shiffman"
+    }
+  },
+  "notes": {
+    "menger-sponge": {
+      "name": "Wikipedia page of the Menger Sponge"
+    },
+    "triangle-strip-issue": {
+      "name": "TRIANGLE_STRIP with WEBGL is not working properly"
+    }
+  },
+  "projects": {
+    "cc1": {
+      "name": "#1: Starfield",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc1-starfield"
+    },
+    "cc2": {
+      "name": "#2: Menger Sponge Fractal",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc2-menger-sponge",
+      "notes": [
+        "menger-sponge"
+      ]
+    },
+    "cc11": {
+      "name": "#11: 3D Terrain Generation with Perlin Noise",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc11-perlinnoiseterrain",
+      "notes": [
+        "triangle-strip-issue"
+      ]
+    },
+    "P_1_0_01": {
+      "name": "#P_1_0_01 Changing colors and size by moving the mouse",
+      "group": "generative-design",
+      "category": "p1-color",
+      "url": "P_1_0_01"
+    }
+  },
+  "links": {
+    "p5-sandbox": "https://mayognaise.github.io/p5-sandbox",
+    "p5-js": "https://p5js.org",
+    "processing": "https://processing.org/",
+    "coding-train": "http://thecodingtrain.com",
+    "daniel-shiffman": "https://shiffman.net",
+    "coding-challenge": "http://thecodingtrain.com/CodingChallenges",
+    "generative-design": "http://www.generative-gestaltung.de/2",
+    "mayognaise": "https://github.com/mayognaise",
+    "cc1-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc1-starfield",
+    "cc1-code": "https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc1-starfield",
+    "cc1-ref": "http://thecodingtrain.com/CodingChallenges/001-starfield.html",
+    "cc2-code": "https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc2-menger-sponge",
+    "cc2-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge",
+    "cc2-ref": "http://thecodingtrain.com/CodingChallenges/002-mengersponge.html",
+    "cc11-code": "https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc11-perlinnoiseterrain",
+    "cc11-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc11-perlinnoiseterrain",
+    "cc11-ref": "http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html",
+    "P1_0_01-code": "https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/P_1_0_01",
+    "P1_0_01-demo": "https://mayognaise.github.io/p5-sandbox/generative-design/P_1_0_01",
+    "P1_0_01-ref": "https://editor.p5js.org/generative-design/sketches/P_1_0_01",
+    "menger-sponge": "https://en.wikipedia.org/wiki/Menger_sponge",
+    "triangle-strip-issue": "https://github.com/processing/p5.js/issues/2344"
+  }
+}
