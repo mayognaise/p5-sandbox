@@ -6,18 +6,27 @@ const fs = require('fs')
 const path = require('path')
 
 const dataURL = path.resolve(__dirname, './data.json')
-// const readmeURL = path.resolve(__dirname, '../../README.md')
-
 const dataRaw = fs.readFileSync(dataURL, 'utf8')
 const data = JSON.parse(dataRaw)
 
 const titleId = 'p5-sandbox'
+const title = `[p5 Sandbox][${titleId}]`
 
+/**
+ * get link
+ * @param {string} id - link id
+ * @requires {string} 
+ */
 const getLink = id => {
   const item = data.links[id]
   return item && `[${id}]: ${item}`
 }
 
+/**
+ * get links
+ * @param {string} id - project id
+ * @returns {string[]} 
+ */
 const getLinks = id => {
   const arr = []
   arr.push('\n---\n')
@@ -43,6 +52,11 @@ const getLinks = id => {
   return arr
 }
 
+/**
+ * convert name
+ * @param {string} name
+ * @returns {string}
+ */
 const getName = name => {
   if (!name || typeof name !== 'string') { return name }
   if (name.charAt(0) === '#') {
@@ -51,6 +65,11 @@ const getName = name => {
   return name.replace(/\_/g, '\\_')
 }
 
+/**
+ * get project line
+ * @param {string} id - project id
+ * @returns {string} 
+ */
 const getProjectLine = id => {
   const name = getName(data.projects[id].name)
   if (!name) {
@@ -59,6 +78,11 @@ const getProjectLine = id => {
   return `- ${getName(name)} [demo][${id}-demo] [code][${id}-code] [reference][${id}-ref]`
 }
 
+/**
+ * get notes
+ * @param {string} id - project id 
+ * @returns {string[]}
+ */
 const getNotes = id => {
   const { notes } = data.projects[id]
   if (!notes || !Array.isArray(notes) || notes.length === 0) { return null }
@@ -73,10 +97,14 @@ const getNotes = id => {
   return arr
 }
 
+/**
+ * render page
+ * @param {string} id - project id
+ */
 const renderPage = id => {
   let arr = []
   // render title
-  arr.push(`## [p5 Sandbox][${titleId}]\n`)
+  arr.push(`## ${title}\n`)
   // add project line
   arr = arr.concat(getProjectLine(id))
   // add notes
@@ -105,15 +133,44 @@ const renderPage = id => {
   if (err) {
     throw new Error(`[renderPage] couldn't save. error: "${err}"`)
   }
-  console.log(`saved! url: $${url}`)
+  console.log(`[renderPage] saved! url: $${url}`)
 }
 
-// render individual markdown page
+/**
+ * render main markdown page
+ */
+const renderMainPage = () => {
+  const baseUrl = path.resolve(__dirname, './main.md')
+  let baseText = fs.readFileSync(baseUrl, 'utf8')
+  const titleOverwrite = '<!-- title -->'
+  const contentsOverwrite = '<!-- contents -->'
+  const linksOverwrite = '<!-- links -->'
+  let output
+  // title
+  output = baseText.replace(titleOverwrite, `# ${title}`)
+  
+  // links
+  const linksText = Object.keys(data.links).map(getLink).join('\n')
+  output = output.replace(linksOverwrite, linksText)
+  
+  console.log(output)
+  return
+  const outputPath = path.resolve(__dirname, '../../README.md')
+  const err = fs.writeFileSync(outputPath, output)
+  if (err) {
+    throw new Error(`[renderMainPage] couldn't save. error: "${err}"`)
+  }
+  console.log(`[renderMainPage] saved!`)
+}
+
+
+
+
+
+/* ======================================
+ * render
+ ====================================== */
+renderMainPage()
+return
 const projedtKeys = Object.keys(data.projects)
 projedtKeys.forEach(renderPage)
-
-
-// const overwrite = '<!-- markdown -->'
-// const baseHTML = baseData.replace(overwrite, readmeHTML)
-// const err = fs.writeFileSync(indexURL, baseHTML)
-// console.log(err || 'file was saved!')

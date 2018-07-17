@@ -2,11 +2,17 @@
   "groups": {
     "coding-train": {
       "name": "Coding Train",
-      "author": "daniel-shiffman"
+      "description": "By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are converted as p5.",
+      "categories": [
+        "coding-challenge"
+      ]
     },
     "generative-design": {
       "name": "Generative Design",
-      "author": null
+      "description": null,
+      "categories": [
+        "p1-color"
+      ]
     }
   },
   "categories": {
