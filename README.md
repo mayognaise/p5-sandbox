@@ -15,7 +15,7 @@ Any [Processing][processing] projects are converted as p5.
 ## [Generative Design][generative-design]
 
 ### P.1. Color
-- \#P1\_0\_01 Changing colors and size by moving the mouse [demo][P1_0_01-demo] [code][P1_0_01-code] [reference][P1_0_01-ref]
+- \#P-1-0-01 Changing colors and size by moving the mouse [demo][p-1-0-01-demo] [code][p-1-0-01-code] [reference][p-1-0-01-ref]
 
 ---
 
@@ -39,6 +39,6 @@ Any [Processing][processing] projects are converted as p5.
 [cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc11-perlinnoiseterrain
 [cc11-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc11-perlinnoiseterrain
 [cc11-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
-[P1_0_01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/P_1_0_01
-[P1_0_01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/P_1_0_01
-[P1_0_01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
+[p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
+[p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/p-1-0-01
+[p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
