@@ -196,10 +196,9 @@ const renderMainPage = () => {
   console.log(`[renderMainPage] saved!`)
 }
 
-
 /* ======================================
  * render
- ====================================== */
+ ====================================== */`
 renderMainPage()
 return
 const projedtKeys = Object.keys(data.projects)
