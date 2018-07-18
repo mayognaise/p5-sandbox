@@ -148,13 +148,46 @@ const renderMainPage = () => {
   let output
   // title
   output = baseText.replace(titleOverwrite, `# ${title}`)
+
+  // contents
+  const contentsArr = []
+  Object.keys(data.groups).forEach(groupKey => {
+    const group = data.groups[groupKey]
+    // group name
+    const groupName = getName(group.name)
+    if (!groupName) {
+      throw new Error(`[getNotes] name is required in "groups". id: "${groupKey}"`)
+    }
+    const groupText = data.links[groupKey] ? `[${groupName}][${groupKey}]` : groupName
+    contentsArr.push(`## ${groupText}`)
+    // group description (option)
+    const groupDesc = getName(group.description)
+    groupDesc && contentsArr.push(groupDesc)
+    // group categories
+    if (Array.isArray(group.categories)) {
+      group.categories.forEach(categoryKey => {
+        const category = data.categories[categoryKey]
+        // category name
+        const categoryName = getName(category.name)
+        if (!categoryName) {
+          throw new Error(`[getNotes] name is required in "categorys". id: "${categorykey}"`)
+        }
+        const categoryText = data.links[categoryKey] ? `[${categoryName}][${categoryKey}]` : categoryName
+        contentsArr.push(`\n### ${categoryText}`)
+        // projects filtered by categoryKey
+        const projects = Object.keys(data.projects).filter(key => data.projects[key].category === categoryKey)
+        projects.forEach(projId => contentsArr.push(getProjectLine(projId)))
+      })
+    }
+    contentsArr.push('\n')
+  })
+  output = output.replace(contentsOverwrite, contentsArr.join('\n'))
   
   // links
   const linksText = Object.keys(data.links).map(getLink).join('\n')
   output = output.replace(linksOverwrite, linksText)
   
-  console.log(output)
-  return
+  // save!
   const outputPath = path.resolve(__dirname, '../../README.md')
   const err = fs.writeFileSync(outputPath, output)
   if (err) {
@@ -162,9 +195,6 @@ const renderMainPage = () => {
   }
   console.log(`[renderMainPage] saved!`)
 }
-
-
-
 
 
 /* ======================================
