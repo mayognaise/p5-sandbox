@@ -10,8 +10,9 @@
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "build-index": "node ./scripts/build-index/build.js",
+    "build-doc-index": "node ./scripts/build-doc-index/build.js",
     "build-md": "node ./scripts/build-md/build.js",
-    "build-all": "npm run build && npm run build-index && npm run build-md"
+    "build-all": "npm run build && npm run build-doc-index && npm run build-index && npm run build-md"
   },
   "keywords": [],
   "author": "",

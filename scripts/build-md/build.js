@@ -5,7 +5,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const dataURL = path.resolve(__dirname, './data.json')
+const dataURL = path.resolve(__dirname, '../../assets/json/data.json')
 const dataRaw = fs.readFileSync(dataURL, 'utf8')
 const data = JSON.parse(dataRaw)
 

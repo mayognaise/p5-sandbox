@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    utils: path.resolve(__dirname, './docs/utils/index.js'),
-    index: path.resolve(__dirname, './scripts/build-index/base.js'),
+    'utils': path.resolve(__dirname, './docs/utils/index.js'),
+    'doc-index': path.resolve(__dirname, './scripts/build-doc-index/base.js'),
   },
   output: {
     path: path.resolve(__dirname, './docs/dist')

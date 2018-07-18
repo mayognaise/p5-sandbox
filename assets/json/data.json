@@ -41,7 +41,10 @@
       "name": "#1: Starfield",
       "group": "coding-train",
       "category": "coding-challenge",
-      "url": "cc001-starfield"
+      "url": "cc001-starfield",
+      "scripts": [
+        "./Star.js"
+      ]
     },
     "cc002": {
       "name": "#2: Menger Sponge Fractal",
@@ -50,6 +53,9 @@
       "url": "cc002-menger-sponge",
       "notes": [
         "menger-sponge"
+      ],
+      "scripts": [
+        "./Box.js"
       ]
     },
     "cc011": {
@@ -65,7 +71,10 @@
       "name": "#P-1-0-01 Changing colors and size by moving the mouse",
       "group": "generative-design",
       "category": "p1-color",
-      "url": "p-1-0-01"
+      "url": "p-1-0-01",
+      "addons": [
+        "../../lib/p5/addons/p5.dom.min.js"
+      ]
     }
   },
   "links": {
