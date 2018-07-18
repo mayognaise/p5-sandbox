@@ -13,7 +13,7 @@
     "build-doc-index": "node ./scripts/build-doc-index/index.js",
     "build-md": "node ./scripts/build-md/index.js",
     "build-all": "npm run build && npm run build-doc-index && npm run build-index && npm run build-md",
-    "create-projects": "node ./scripts/create-projects/build.js"
+    "create-proj": "node ./scripts/create-proj/index.js"
   },
   "keywords": [],
   "author": "",

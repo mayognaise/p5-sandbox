@@ -30,33 +30,42 @@ const createProject = id => {
     console.log('created project directory:', projectDir)
   }
   // check sketch.js
-  const sketchDist = path.resolve(__dirname, `../../docs/${group}/${url}/sketch.js`)
-  if (!fs.existsSync(sketchDist)) {
-    fs.writeFileSync(sketchDist, sketchRaw)
-    console.log('created sketch.js:', sketchDist)
+  const sketchDest = path.resolve(__dirname, `../../docs/${group}/${url}/sketch.js`)
+  if (!fs.existsSync(sketchDest)) {
+    fs.writeFileSync(sketchDest, sketchRaw)
+    console.log('created sketch.js:', sketchDest)
   }
   // check scripts
   if (Array.isArray(scripts)) {
     scripts.forEach(src => {
-      const srcDist = path.resolve(__dirname, `../../docs/${group}/${url}/${src}`)
-      if (!fs.existsSync(srcDist)) {
+      const srcDest = path.resolve(__dirname, `../../docs/${group}/${url}/${src}`)
+      if (!fs.existsSync(srcDest)) {
         const srcRaw = `class ${src.split('.')[0]} {\n  constructor() {\n  }\n  update() {\n  }\n  show() {\n  }\n}\n`
-        fs.writeFileSync(srcDist, srcRaw)
-        console.log(`created:`, srcDist)
+        fs.writeFileSync(srcDest, srcRaw)
+        console.log(`created script:`, srcDest)
       }
     })
   }
   // check index.html
-  const indexDist = path.resolve(__dirname, `../../docs/${group}/${url}/index.html`)
-  if (!fs.existsSync(indexDist)) {
+  const indexDest = path.resolve(__dirname, `../../docs/${group}/${url}/index.html`)
+  if (!fs.existsSync(indexDest)) {
     renderIndexPage(id)
-    console.log('created index.html:', indexDist)
+    console.log('created index.html:', indexDest)
   }
   // check readme
-  const readmeDist = path.resolve(__dirname, `../../docs/${group}/${url}/README.md`)
-  if (!fs.existsSync(readmeDist)) {
+  const readmeDest = path.resolve(__dirname, `../../docs/${group}/${url}/README.md`)
+  if (!fs.existsSync(readmeDest)) {
     renderReadMe(id)
-    console.log('created readme.html:', readmeDist)
+    console.log('created readme:', readmeDest)
+  }
+  // check thumb
+  const baseThumb = path.resolve(__dirname, './thumb.png')
+  const thumbDest = path.resolve(__dirname, `../../docs/assets/images/thumbs/${url}.png`)
+  if (!fs.existsSync(thumbDest)) {
+    const thumbSrc = fs.createReadStream(baseThumb)
+    const outStr = fs.createWriteStream(thumbDest)
+    thumbSrc.pipe(outStr)
+    console.log('created thumb:', thumbDest)
   }
 }
 
