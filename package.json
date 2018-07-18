@@ -4,7 +4,7 @@
   "description": "",
   "main": "p5.js",
   "scripts": {
-    "start": "npm run dev && npm run sync",
+    "start": "npm run dev & npm run sync",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "browser-sync start --server ./docs --files ./docs --port '4649'",
     "dev": "webpack --config webpack.dev.js",

@@ -20,4 +20,4 @@ const baseHTML = baseData.replace(overwrite, readmeHTML)
 
 const err = fs.writeFileSync(indexURL, baseHTML)
 
-console.log(err || 'file was saved!')
+console.log(err || '[renderIndexPage] saved!')

@@ -200,6 +200,5 @@ const renderMainPage = () => {
  * render
  ====================================== */
 renderMainPage()
-return
 const projedtKeys = Object.keys(data.projects)
 projedtKeys.forEach(renderPage)

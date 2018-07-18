@@ -6,6 +6,6 @@
 
 [p5-sandbox]: https://mayognaise.github.io/p5-sandbox
 [p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
-[p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/p-1-0-01
+[p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/generative-design/p-1-0-01
 [p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
 
