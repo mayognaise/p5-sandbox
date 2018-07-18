@@ -1,4 +1,4 @@
-require('../../utils/css/default.styl')
+require('../../docs/utils/css/default.styl')
 require('./base.styl')
 
 const init = () => {

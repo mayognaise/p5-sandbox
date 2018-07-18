@@ -123,7 +123,7 @@ const renderPage = id => {
   if (!group) {
     throw new Error(`[renderPage] group is required in "projects". id: "${id}"`)
   }
-  const dir = path.resolve(__dirname, `../../${group}/${url}`)
+  const dir = path.resolve(__dirname, `../../docs/${group}/${url}`)
   if (!fs.existsSync(dir)) {
     throw new Error(`[renderPage] no directry exist. dir: "${dir}"`)
   }
