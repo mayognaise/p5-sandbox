@@ -1,15 +1,10 @@
 let sponge = []
 let count = 3
-let stats
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL)
   const size = Math.min(windowWidth, windowHeight) / 2
   sponge.push(new Box(0, 0, 0, size))
-  // for debug
-  stats = new Stats()
-  new Controller()
-  new ReadMe(['README.md', 'sketch.js', 'Box.js'])
 }
 
 function draw() {
@@ -23,7 +18,6 @@ function draw() {
   sponge.forEach(box => {
     box.show()
   })
-  stats.update(floor(frameRate()))
 }
 
 function mousePressed() {

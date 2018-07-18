@@ -43,7 +43,7 @@
       "category": "coding-challenge",
       "url": "cc001-starfield",
       "scripts": [
-        "./Star.js"
+        "Star.js"
       ]
     },
     "cc002": {
@@ -55,7 +55,7 @@
         "menger-sponge"
       ],
       "scripts": [
-        "./Box.js"
+        "Box.js"
       ]
     },
     "cc011": {

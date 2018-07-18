@@ -5,9 +5,6 @@ function setup() {
   for (let index = 0; index < 400; index++) {
     stars.push(new Star())
   }
-  // for debug
-  new Controller()
-  new ReadMe(['README.md', 'sketch.js', 'Star.js'])
 }
 
 function draw() {

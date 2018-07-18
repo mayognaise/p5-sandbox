@@ -1,6 +1,5 @@
 const scl = 25
 const terrain = []
-let stats
 let w, h
 let cols, rows
 let flying = 0
@@ -14,10 +13,6 @@ function setup() {
   for (var x = 0; x < cols; x++) {
     terrain[x] = []
   }
-  // for debug
-  stats = new Stats()
-  new Controller()
-  new ReadMe(['README.md', 'sketch.js'])
 }
 
 function draw() {
@@ -42,7 +37,6 @@ function draw() {
     }
     endShape(CLOSE)
   }
-  stats.update(floor(frameRate()))
 }
 
 function windowResized() {

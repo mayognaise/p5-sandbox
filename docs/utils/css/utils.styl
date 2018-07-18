@@ -5,16 +5,13 @@ html
 body
   overflow hidden !important
 
-canvas
-  position fixed
-  vertical-align top
-
 #stats
   background black
   bottom 0
   color rgb(0, 255, 0)
   padding 5px
   position fixed
+  z-index 1
   left 0
   .is-hidden &
     display none
@@ -28,6 +25,7 @@ canvas
   font-size larger
   height: $toggleButtonSize
   position fixed
+  z-index 1
   text-align center
   width: $toggleButtonSize
   @media (min-width: 768px)
@@ -47,6 +45,7 @@ $readmeOffsetWidth = 50px
     overflow-x hidden
     overflow-y auto
     position fixed
+    z-index 1
     right 0
     top 0
     width: 'calc(100% - %s)' % $readmeOffsetWidth

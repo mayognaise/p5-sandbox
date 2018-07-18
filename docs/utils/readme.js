@@ -39,12 +39,7 @@ module.exports = class ReadMe {
   }
   getJSText(data) {
     const spliceList = [
-      '//',
-      'let stats',
-      'stats = new Stats',
-      'new ReadMe',
-      'new Controller',
-      'stats.update'
+      '//'
     ]
     const array = data.split('\n')
     for (let count = array.length - 1; count > -1; count--) {

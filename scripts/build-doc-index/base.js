@@ -1,7 +1,7 @@
 require('../../docs/utils/css/default.styl')
 require('./base.styl')
 
-const init = () => {
+const onContentLoaded = () => {
   // unfocus when any link is clicked
   const linkItems = document.querySelectorAll('a')
   for (var item of linkItems) {
@@ -19,4 +19,4 @@ const init = () => {
   }
 }
 
-document.addEventListener('DOMContentLoaded', init)
+document.addEventListener('DOMContentLoaded', onContentLoaded)

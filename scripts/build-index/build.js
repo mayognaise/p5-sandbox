@@ -21,6 +21,7 @@ const renderIndexPage = id => {
   const linksOverwrite = '<!-- links -->'
   const addonsOverwrite = '<!-- addons -->'
   const scriptsOverwrite = '<!-- scripts -->'
+  const projectOverwrite = '<!-- project -->'
   const project = data.projects[id]
   let output = baseData
   // title
@@ -63,6 +64,8 @@ const renderIndexPage = id => {
     const scriptsArr = scripts.map(val => `<script src="${val}"></script>`)
     output = output.replace(scriptsOverwrite, scriptsArr.join('\n'))
   }
+  // project
+  output = output.replace(projectOverwrite, `<script>const project = ${JSON.stringify(project)}</script>`)
   // save!
   const outputPath = path.resolve(__dirname, `../../docs/${project.group}/${project.url}/index.html`)
   const err = fs.writeFileSync(outputPath, output)

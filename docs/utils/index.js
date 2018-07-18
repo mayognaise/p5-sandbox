@@ -1,5 +1,27 @@
 require('./css/default.styl')
 require('./css/utils.styl')
-window.Stats = require('./Stats')
-window.ReadMe = require('./ReadMe')
-window.Controller = require('./Controller')
+const Stats = require('./Stats')
+const ReadMe = require('./ReadMe')
+const Controller = require('./Controller')
+
+let statsItem
+
+const updateStats = () => {
+  if (statsItem && window.frameRate) {
+    statsItem.update(floor(frameRate()))
+  }
+  window.requestAnimationFrame(updateStats)
+}
+
+const onContentLoaded = () => {
+  statsItem = new Stats()
+  updateStats()
+  new Controller()
+  let files = ['README.md', 'sketch.js']
+  if (project.scripts) {
+    files.concat(project.scripts)
+  }
+  new ReadMe(files)
+}
+
+document.addEventListener('DOMContentLoaded', onContentLoaded)

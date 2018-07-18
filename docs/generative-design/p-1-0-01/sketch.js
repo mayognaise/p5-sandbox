@@ -7,9 +7,6 @@ function setup() {
   colorMode(HSB, h, s, b)
   rectMode(CENTER)
   noStroke()
-  // for debug
-  new Controller()
-  new ReadMe(['README.md', 'sketch.js'])
 }
 
 function draw() {
