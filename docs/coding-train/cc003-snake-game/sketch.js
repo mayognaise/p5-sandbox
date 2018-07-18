@@ -6,17 +6,22 @@ let rows
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  snake = new Snake()
   frameRate(5)
-  cols = floor(width / scl)
-  rows = floor(height / scl)
+  cols = rows = floor(min(width, height) / scl)
+  snake = new Snake()
   resetFoodLocation()
   background(50)
   noStroke()
 }
 
 function resetFoodLocation() {
-  food = createVector(floor(random(cols)), floor(random(rows)))
+  const fp = createVector(floor(random(cols)), floor(random(rows)))
+  const sp = snake.getPos()
+  const d = dist(sp.x, sp.y, fp.x, fp.y)
+  if (d < 10) {
+    return resetFoodLocation()
+  }
+  food = fp
 }
 
 function draw() {

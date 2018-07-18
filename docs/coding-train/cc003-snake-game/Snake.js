@@ -6,14 +6,17 @@ class Snake {
   }
   update() {
     this.pos.add(this.v)
-    if (this.pos.x < 0 || this.pos.x * scl + scl > width) {
+    if (this.pos.x < 0 || this.pos.x >= cols) {
       this.v.mult(-1)
       this.pos.add(this.v.x * 2, 0)
     }
-    if (this.pos.y < 0 || this.pos.y * scl + scl > height) {
+    if (this.pos.y < 0 || this.pos.y >= rows) {
       this.v.mult(-1)
       this.pos.add(0, this.v.y * 2)
     }
+  }
+  getPos() {
+    return this.pos
   }
   setDir(xs, ys) {
     this.v = createVector(xs, ys)
