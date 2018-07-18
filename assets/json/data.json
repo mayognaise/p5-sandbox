@@ -37,13 +37,25 @@
     }
   },
   "projects": {
-    "cc001": {
-      "name": "#1: Starfield",
+    "cc011": {
+      "name": "#11: 3D Terrain Generation with Perlin Noise",
       "group": "coding-train",
       "category": "coding-challenge",
-      "url": "cc001-starfield",
+      "url": "cc011-perlinnoiseterrain",
+      "notes": [
+        "triangle-strip-issue"
+      ]
+    },
+    "cc003": {
+      "name": "#3: The Snake Game",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc003-snake-game",
+      "notes": [
+        "snake-game"
+      ],
       "scripts": [
-        "Star.js"
+        "Snake.js"
       ]
     },
     "cc002": {
@@ -58,13 +70,13 @@
         "Box.js"
       ]
     },
-    "cc011": {
-      "name": "#11: 3D Terrain Generation with Perlin Noise",
+    "cc001": {
+      "name": "#1: Starfield",
       "group": "coding-train",
       "category": "coding-challenge",
-      "url": "cc011-perlinnoiseterrain",
-      "notes": [
-        "triangle-strip-issue"
+      "url": "cc001-starfield",
+      "scripts": [
+        "Star.js"
       ]
     },
     "p-1-0-01": {
@@ -92,6 +104,9 @@
     "cc002-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc002-menger-sponge",
     "cc002-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc002-menger-sponge",
     "cc002-ref": "http://thecodingtrain.com/CodingChallenges/002-mengersponge.html",
+    "cc003-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-menger-sponge",
+    "cc003-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc003-menger-sponge",
+    "cc003-ref": "http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html",
     "cc011-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain",
     "cc011-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain",
     "cc011-ref": "http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html",
@@ -99,6 +114,7 @@
     "p-1-0-01-demo": "https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01",
     "p-1-0-01-ref": "https://editor.p5js.org/generative-design/sketches/P_1_0_01",
     "menger-sponge": "https://en.wikipedia.org/wiki/Menger_sponge",
+    "snake-game": "https://en.wikipedia.org/wiki/Snake_(video_game_genre)",
     "triangle-strip-issue": "https://github.com/processing/p5.js/issues/2344"
   }
 }
