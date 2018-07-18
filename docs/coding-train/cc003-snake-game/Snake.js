@@ -1,24 +1,40 @@
 class Snake {
-  constructor(scl) {
-    this.x = 0
-    this.y = 0
-    this.xSpeed = 1
-    this.ySpeed = 0
-    this.scl = scl
+  constructor() {
+    this.pos = createVector(0, 0)
+    this.v = createVector(1, 0)
+    this.tails = []
   }
   update() {
-    this.x += this.xSpeed * this.scl
-    this.y += this.ySpeed * this.scl
-    this.x = constrain(this.x, 0, width - this.scl)
-    this.y = constrain(this.y, 0, height - this.scl)
+    this.pos.add(this.v)
+    if (this.pos.x < 0 || this.pos.x * scl + scl > width) {
+      this.v.mult(-1)
+      this.pos.add(this.v.x * 2, 0)
+    }
+    if (this.pos.y < 0 || this.pos.y * scl + scl > height) {
+      this.v.mult(-1)
+      this.pos.add(0, this.v.y * 2)
+    }
   }
-  dir(xs, ys) {
-    this.xSpeed = xs
-    this.ySpeed = ys
+  setDir(xs, ys) {
+    this.v = createVector(xs, ys)
+  }
+  ateFood() {
+    return dist(this.pos.x, this.pos.y, food.x, food.y) < 1
+  }
+  addTail() {
+    this.tails.unshift(this.pos.copy())
   }
   show() {
-    fill(255)
-    noStroke()
-    rect(this.x, this.y, this.scl, this.scl)
+    fill(0, 200, 0)
+    this.tails.forEach(this.draw)
+    fill(0, 255, 0)
+    this.draw(this.pos)
+    if (this.tails.length > 0) {
+      this.tails.pop()
+      this.tails.unshift(this.pos.copy())
+    }
+  }
+  draw(pos) {
+    rect(pos.x * scl, pos.y * scl, scl, scl)
   }
 }
