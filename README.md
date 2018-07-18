@@ -6,9 +6,9 @@ This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projec
 By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are converted as p5.
 
 ### [Coding Challenge][coding-challenge]
-- \#1: Starfield [demo][cc1-demo] [code][cc1-code] [reference][cc1-ref]
-- \#2: Menger Sponge Fractal [demo][cc2-demo] [code][cc2-code] [reference][cc2-ref]
-- \#11: 3D Terrain Generation with Perlin Noise [demo][cc11-demo] [code][cc11-code] [reference][cc11-ref]
+- \#1: Starfield [demo][cc001-demo] [code][cc001-code] [reference][cc001-ref]
+- \#2: Menger Sponge Fractal [demo][cc002-demo] [code][cc002-code] [reference][cc002-ref]
+- \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
 
 
 ## [Generative Design][generative-design]
@@ -30,15 +30,15 @@ By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
 [generative-design]: http://www.generative-gestaltung.de/2
 [mayognaise]: https://github.com/mayognaise
-[cc1-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc1-starfield
-[cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc1-starfield
-[cc1-ref]: http://thecodingtrain.com/CodingChallenges/001-starfield.html
-[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc2-menger-sponge
-[cc2-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge
-[cc2-ref]: http://thecodingtrain.com/CodingChallenges/002-mengersponge.html
-[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc11-perlinnoiseterrain
-[cc11-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc11-perlinnoiseterrain
-[cc11-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
+[cc001-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc001-starfield
+[cc001-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc001-starfield
+[cc001-ref]: http://thecodingtrain.com/CodingChallenges/001-starfield.html
+[cc002-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc002-menger-sponge
+[cc002-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc002-menger-sponge
+[cc002-ref]: http://thecodingtrain.com/CodingChallenges/002-mengersponge.html
+[cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
+[cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
+[cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
 [p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/generative-design/p-1-0-01
 [p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
 [p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01

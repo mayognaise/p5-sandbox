@@ -1,5 +1,5 @@
-#codingchallengecodingchallenge + ul li:nth-child(1) { background-image: url('../images/thumbs/cc1-starfield.png'); }
-#codingchallengecodingchallenge + ul li:nth-child(2) { background-image: url('../images/thumbs/cc2-menger-sponge.png'); }
-#codingchallengecodingchallenge + ul li:nth-child(3) { background-image: url('../images/thumbs/cc11-perlinnoiseterrain.png'); }
+#codingchallengecodingchallenge + ul li:nth-child(1) { background-image: url('../images/thumbs/cc001-starfield.png'); }
+#codingchallengecodingchallenge + ul li:nth-child(2) { background-image: url('../images/thumbs/cc002-menger-sponge.png'); }
+#codingchallengecodingchallenge + ul li:nth-child(3) { background-image: url('../images/thumbs/cc011-perlinnoiseterrain.png'); }
 
 #p1color + ul li:nth-child(1) { background-image: url('../images/thumbs/p-1-0-01.png'); }
