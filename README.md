@@ -31,14 +31,14 @@ Any [Processing][processing] projects are converted as p5.
 [mayognaise]: https://github.com/mayognaise
 
 [cc1-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc1-starfield
-[cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc1-starfield
+[cc1-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc1-starfield
 [cc1-ref]: http://thecodingtrain.com/CodingChallenges/001-starfield.html
-[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc2-menger-sponge
+[cc2-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc2-menger-sponge
 [cc2-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc2-menger-sponge
 [cc2-ref]: http://thecodingtrain.com/CodingChallenges/002-mengersponge.html
-[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/coding-train/cc11-perlinnoiseterrain
+[cc11-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc11-perlinnoiseterrain
 [cc11-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc11-perlinnoiseterrain
 [cc11-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
 [p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
-[p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/generative-design/p-1-0-01
+[p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/generative-design/p-1-0-01
 [p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
