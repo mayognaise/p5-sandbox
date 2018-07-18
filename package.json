@@ -4,13 +4,14 @@
   "description": "",
   "main": "p5.js",
   "scripts": {
-    "start": "npm run dev & npm run sync",
+    "start": "npm run dev && npm run sync",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sync": "browser-sync start --server ./docs --files ./docs --port '4649'",
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "build-index": "node ./scripts/build-index/build.js",
-    "build-md": "node ./scripts/build-md/build.js"
+    "build-md": "node ./scripts/build-md/build.js",
+    "build-all": "npm run build && npm run build-index && npm run build-md"
   },
   "keywords": [],
   "author": "",
