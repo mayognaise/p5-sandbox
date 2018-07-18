@@ -14,7 +14,6 @@ const init = () => {
       const link = 'https://mayognaise.github.io/p5-sandbox'
       if (href.indexOf(link) === 0) {
         item.setAttribute('href', href === link ? '/' : href.replace(link, ''))
-        item.removeAttribute('target')
       }
     }
   }

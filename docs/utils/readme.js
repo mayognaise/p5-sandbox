@@ -3,7 +3,7 @@
  */
 
 const showdown = require('showdown')
-const converter = new showdown.Converter({ openLinksInNewWindow: true })
+const converter = new showdown.Converter()
 
 const hljs = require('highlight.js/lib/highlight.js')
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'))
@@ -70,7 +70,6 @@ module.exports = class ReadMe {
             const link = 'https://mayognaise.github.io/p5-sandbox'
             if (href.indexOf(link) === 0) {
               item.setAttribute('href', href === link ? '/' : href.replace(link, ''))
-              item.removeAttribute('target')
             }
           }
         }

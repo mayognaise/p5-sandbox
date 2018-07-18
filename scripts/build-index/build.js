@@ -5,7 +5,7 @@
 const fs = require('fs')
 const path = require('path')
 const showdown = require('showdown')
-const converter = new showdown.Converter({ openLinksInNewWindow: true })
+const converter = new showdown.Converter()
 
 const readmeURL = path.resolve(__dirname, '../../README.md')
 const baseURL = path.resolve(__dirname, './base.html')
