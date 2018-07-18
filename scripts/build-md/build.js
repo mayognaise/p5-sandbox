@@ -188,7 +188,7 @@ const renderMainPage = () => {
   output = output.replace(linksOverwrite, linksText)
   
   // save!
-  const outputPath = path.resolve(__dirname, '../../README.md')
+  const outputPath = path.resolve(__dirname, '../../docs/README.md')
   const err = fs.writeFileSync(outputPath, output)
   if (err) {
     throw new Error(`[renderMainPage] couldn't save. error: "${err}"`)
