@@ -16,7 +16,7 @@ const baseData = fs.readFileSync(baseURL, 'utf8')
  * render index html
  * @param {string} id - project id
  */
-const renderIndexPage = id => {
+exports.renderIndexPage = id => {
   const titleOverwrite = '<!-- title -->'
   const linksOverwrite = '<!-- links -->'
   const addonsOverwrite = '<!-- addons -->'
@@ -61,7 +61,7 @@ const renderIndexPage = id => {
   // scripts (options)
   const scripts = project.scripts
   if (Array.isArray(scripts)) {
-    const scriptsArr = scripts.map(val => `<script src="${val}"></script>`)
+    const scriptsArr = scripts.map(val => `<script src="./${val}"></script>`)
     output = output.replace(scriptsOverwrite, scriptsArr.join('\n'))
   }
   // project
@@ -74,9 +74,3 @@ const renderIndexPage = id => {
   }
   console.log(`[renderIndexPage] saved! url: $${project.url}`)
 }
-
-/* ======================================
- * render
- ====================================== */
-const projedtKeys = Object.keys(data.projects)
-projedtKeys.forEach(renderIndexPage)

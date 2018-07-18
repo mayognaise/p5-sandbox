@@ -101,7 +101,7 @@ const getNotes = id => {
  * render page
  * @param {string} id - project id
  */
-const renderPage = id => {
+exports.renderReadMe = id => {
   let arr = []
   // render title
   arr.push(`## ${title}\n`)
@@ -139,7 +139,7 @@ const renderPage = id => {
 /**
  * render main markdown page
  */
-const renderMainPage = () => {
+exports.renderMainReadMe = () => {
   const baseUrl = path.resolve(__dirname, './main.md')
   let baseText = fs.readFileSync(baseUrl, 'utf8')
   const titleOverwrite = '<!-- title -->'
@@ -195,10 +195,3 @@ const renderMainPage = () => {
   }
   console.log(`[renderMainPage] saved!`)
 }
-
-/* ======================================
- * render
- ====================================== */
-renderMainPage()
-const projedtKeys = Object.keys(data.projects)
-projedtKeys.forEach(renderPage)
