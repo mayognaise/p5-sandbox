@@ -3,6 +3,7 @@
  */
 
 const paused = 'is-paused'
+const hidden = 'is-hidden'
 
 module.exports = class Controller {
   constructor() {
@@ -23,6 +24,8 @@ module.exports = class Controller {
     })
     this.el.appendChild(button)
     // visibility
+    let isHidden = window.localStorage.getItem(hidden) === 'true'
+    isHidden && document.body.classList.add(hidden)
     document.addEventListener('keydown', e => {
       switch (e.key) {
         // save image
@@ -33,7 +36,9 @@ module.exports = class Controller {
           break
         // toggle visibility
         case 'h':
-          document.body.classList.toggle('is-hidden')
+          isHidden = !isHidden
+          window.localStorage.setItem(hidden, isHidden)
+          document.body.classList.toggle(hidden)
           break
         // toggle playback
         case 'p':
