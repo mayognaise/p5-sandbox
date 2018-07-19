@@ -1,43 +1,49 @@
 let snake
 let food
+let foodEmoji
+const foodEmojis = ['🍔', '🌭', '🍕', '🥗', '🍣', '🍟', '🍰', '🍿', '🍦', '🧀', '🍓', '🥝', '🥐']
+let foodCount = 0
 let scl
+let lineHeight = 1
 const cols = rows = 16
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
   scl = floor(min(width, height) / cols)
+  textSize(scl)
   frameRate(3)
   snake = new Snake()
-  resetFoodLocation()
-  background(50)
+  shuffle(foodEmojis)
+  resetFood()
   noStroke()
 }
 
-function resetFoodLocation() {
+function resetFood() {
   const fp = createVector(floor(random(cols)), floor(random(rows)))
   const sp = snake.getPos()
   const d = sp.dist(fp)
-  if (d < 10) {
-    return resetFoodLocation()
+  if (d < 6) {
+    return resetFood()
   }
+  foodEmoji = foodEmojis[foodCount++ % foodEmojis.length]
   food = fp
 }
 
 function draw() {
   // bg
+  background(50)
   fill(0)
   rect(0, 0, cols * scl, rows * scl)
   // snake
   snake.update()
   snake.death()
-  if (snake.ateFood()) {
-    resetFoodLocation()
-    snake.addTail()
-  }
   snake.show()
+  if (snake.ateFood()) {
+    snake.addTail(foodEmoji)
+    resetFood()
+  }
   // food
-  fill(255, 0, 100)
-  rect(food.x * scl, food.y * scl, scl, scl)
+  text(foodEmoji, food.x * scl, (food.y + lineHeight) * scl)
 }
 
 function keyPressed() {

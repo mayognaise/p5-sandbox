@@ -17,7 +17,7 @@ function resetFoodLocation() {
   const fp = createVector(floor(random(cols)), floor(random(rows)))
   const sp = snake.getPos()
   const d = sp.dist(fp)
-  if (d < 10) {
+  if (d < 6) {
     return resetFoodLocation()
   }
   food = fp

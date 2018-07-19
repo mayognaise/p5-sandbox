@@ -4,7 +4,8 @@ class Snake {
     this.v = createVector(1, 0)
     this.tails = []
     this.draw = this.draw.bind(this)
-    this.emoji = null
+    this.emojis = ['😄', '😃']
+    this.emoji = this.emojis[0]
   }
   getPos() {
     return this.pos
@@ -15,12 +16,12 @@ class Snake {
   ateFood() {
     return this.pos.dist(food) < 1
   }
-  addTail() {
-    this.tails.unshift(this.pos.copy())
+  addTail(emoji) {
+    this.tails.unshift({ emoji, pos: this.pos.copy() })
     this.emoji = '😋'
   }
   death() {
-    const tail = this.tails.find(t => this.pos.dist(t) < 1)
+    const tail = this.tails.find(t => this.pos.dist(t.pos) < 1)
     if (!tail) { return }
     this.tails = []
     this.emoji = '😫'
@@ -34,21 +35,22 @@ class Snake {
   }
   show() {
     this.tails.forEach(this.draw)
-    this.draw(this.pos)
+    const { emoji, pos } = this
+    this.draw({ emoji, pos })
     if (this.tails.length > 0) {
-      this.tails.pop()
-      this.tails.unshift(this.pos.copy())
+      this.tails = this.tails.map((tail, index) => {
+        const prev = this.tails[index - 1]
+        return {
+          emoji: tail.emoji,
+          pos: prev ? prev.pos : pos.copy()
+        }
+      })
     }
-    // emoji
-    if (this.emoji) {
-      textSize(scl)
-      text(this.emoji, this.pos.x * scl, (this.pos.y + .95) * scl)
-      this.emoji = null
-    }
+    if (this.emoji === '😫') { return }
+    this.emoji = (this.emoji === this.emojis[0]) ? this.emojis[1] : this.emojis[0]
   }
-  draw(pos, index = -1) {
-    const g = 255 - (index + 1) * 10
-    fill(0, max(50, g) , 0)
-    rect(pos.x * scl, pos.y * scl, scl, scl)
+  draw({ emoji, pos }) {
+    textSize(scl)
+    text(emoji, pos.x * scl, (pos.y + lineHeight) * scl)
   }
 }
