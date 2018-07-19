@@ -40,7 +40,9 @@ const createProject = id => {
     scripts.forEach(src => {
       const srcDest = path.resolve(__dirname, `../../docs/${group}/${url}/${src}`)
       if (!fs.existsSync(srcDest)) {
-        const srcRaw = `class ${src.split('.')[0]} {\n  constructor() {\n  }\n  update() {\n  }\n  show() {\n  }\n}\n`
+        const arr = src.split('.')
+        const className = arr[arr.length - 2]
+        const srcRaw = `class ${className.charAt(0) === '/' ? className.substr(1) : className} {\n  constructor() {\n  }\n  update() {\n  }\n  show() {\n  }\n}\n`
         fs.writeFileSync(srcDest, srcRaw)
         console.log(`created script:`, srcDest)
       }

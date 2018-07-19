@@ -1,12 +1,16 @@
 # [p5 Sandbox][p5-sandbox]
 
 This is a study for [p5.js][p5-js]. They are mainly based on open-sourced projects.
+Here is note different from original code:
+- Any [Processing][processing] projects are converted as p5.
+- Used [Vector][vector-example] and [WEBGL mode][webgl] as much as possible.
 
 ## [Coding Train][coding-train]
-By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are converted as p5.
+By [Daniel Shiffman][daniel-shiffman].
 
 ### [Coding Challenge][coding-challenge]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
+- \#4: Purple Rain [demo][cc004-demo] [code][cc004-code] [reference][cc004-ref]
 - \#3: The Snake Game - Emoji [demo][cc003-emoji-demo] [code][cc003-emoji-code] [reference][cc003-emoji-ref]
 - \#3: The Snake Game [demo][cc003-demo] [code][cc003-code] [reference][cc003-ref]
 - \#2: Menger Sponge Fractal [demo][cc002-demo] [code][cc002-code] [reference][cc002-ref]
@@ -44,6 +48,9 @@ By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are
 [cc003-emoji-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game-emoji
 [cc003-emoji-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game-emoji
 [cc003-emoji-ref]: http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html
+[cc004-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc004-purplerain
+[cc004-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc004-purplerain
+[cc004-ref]: http://thecodingtrain.com/CodingChallenges/004-purplerain.html
 [cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
 [cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
 [cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
@@ -53,3 +60,5 @@ By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are
 [menger-sponge]: https://en.wikipedia.org/wiki/Menger_sponge
 [snake-game]: https://en.wikipedia.org/wiki/Snake_(video_game_genre)
 [triangle-strip-issue]: https://github.com/processing/p5.js/issues/2344
+[vector-example]: https://mayognaise.github.io/p5-vector-examples
+[webgl]: https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5

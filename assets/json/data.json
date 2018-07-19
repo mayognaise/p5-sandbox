@@ -2,7 +2,7 @@
   "groups": {
     "coding-train": {
       "name": "Coding Train",
-      "description": "By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are converted as p5.",
+      "description": "By [Daniel Shiffman][daniel-shiffman].",
       "categories": [
         "coding-challenge"
       ]
@@ -47,6 +47,15 @@
       "url": "cc011-perlinnoiseterrain",
       "notes": [
         "triangle-strip-issue"
+      ]
+    },
+    "cc004": {
+      "name": "#4: Purple Rain",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc004-purplerain",
+      "scripts": [
+        "./Drop.js"
       ]
     },
     "cc003-emoji": {
@@ -127,6 +136,9 @@
     "cc003-emoji-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game-emoji",
     "cc003-emoji-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game-emoji",
     "cc003-emoji-ref": "http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html",
+    "cc004-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc004-purplerain",
+    "cc004-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc004-purplerain",
+    "cc004-ref": "http://thecodingtrain.com/CodingChallenges/004-purplerain.html",
     "cc011-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain",
     "cc011-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain",
     "cc011-ref": "http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html",
@@ -135,6 +147,8 @@
     "p-1-0-01-ref": "https://editor.p5js.org/generative-design/sketches/P_1_0_01",
     "menger-sponge": "https://en.wikipedia.org/wiki/Menger_sponge",
     "snake-game": "https://en.wikipedia.org/wiki/Snake_(video_game_genre)",
-    "triangle-strip-issue": "https://github.com/processing/p5.js/issues/2344"
+    "triangle-strip-issue": "https://github.com/processing/p5.js/issues/2344",
+    "vector-example": "https://mayognaise.github.io/p5-vector-examples",
+    "webgl": "https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"
   }
 }
