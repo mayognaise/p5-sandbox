@@ -5,15 +5,11 @@ class Snake {
     this.tails = []
   }
   update() {
+    const v = p5.Vector.add(this.pos, this.v)
+    if (v.x < 0 || v.x >= cols || v.y < 0 || v.y >= rows) {
+      this.v.mult(-1)
+    }
     this.pos.add(this.v)
-    if (this.pos.x < 0 || this.pos.x >= cols) {
-      this.v.mult(-1)
-      this.pos.add(this.v.x * 2, 0)
-    }
-    if (this.pos.y < 0 || this.pos.y >= rows) {
-      this.v.mult(-1)
-      this.pos.add(0, this.v.y * 2)
-    }
   }
   getPos() {
     return this.pos
