@@ -10,6 +10,7 @@ By [Daniel Shiffman][daniel-shiffman].
 
 ### [Coding Challenge][coding-challenge]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
+- \#5: Space Invaders [demo][cc005-demo] [code][cc005-code] [reference][cc005-ref]
 - \#4: Purple Rain [demo][cc004-demo] [code][cc004-code] [reference][cc004-ref]
 - \#3: The Snake Game - Emoji [demo][cc003-emoji-demo] [code][cc003-emoji-code] [reference][cc003-emoji-ref]
 - \#3: The Snake Game [demo][cc003-demo] [code][cc003-code] [reference][cc003-ref]
@@ -51,6 +52,9 @@ By [Daniel Shiffman][daniel-shiffman].
 [cc004-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc004-purplerain
 [cc004-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc004-purplerain
 [cc004-ref]: http://thecodingtrain.com/CodingChallenges/004-purplerain.html
+[cc005-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc005-space-invaders
+[cc005-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc005-space-invaders
+[cc005-ref]: http://thecodingtrain.com/CodingChallenges/005-space-invaders-p5.html
 [cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
 [cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
 [cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html

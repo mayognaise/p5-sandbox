@@ -49,6 +49,16 @@
         "triangle-strip-issue"
       ]
     },
+    "cc005": {
+      "name": "#5: Space Invaders",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc005-space-invaders",
+      "scripts": [
+        "./Flower.js",
+        "./Ship.js"
+      ]
+    },
     "cc004": {
       "name": "#4: Purple Rain",
       "group": "coding-train",
@@ -139,6 +149,9 @@
     "cc004-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc004-purplerain",
     "cc004-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc004-purplerain",
     "cc004-ref": "http://thecodingtrain.com/CodingChallenges/004-purplerain.html",
+    "cc005-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc005-space-invaders",
+    "cc005-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc005-space-invaders",
+    "cc005-ref": "http://thecodingtrain.com/CodingChallenges/005-space-invaders-p5.html",
     "cc011-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain",
     "cc011-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain",
     "cc011-ref": "http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html",
