@@ -7,7 +7,6 @@ function setup() {
   scl = floor(min(width, height) / cols)
   frameRate(3)
   ship = new Ship()
-  background(50)
   noStroke()
   rectMode(CENTER)
   // for arrow keypads
@@ -16,6 +15,7 @@ function setup() {
 
 function draw() {
   // bg
+  background(50)
   fill(0)
   translate(cols * scl / 2, rows * scl)
   rect(0, rows * scl / -2, cols * scl, rows * scl)
