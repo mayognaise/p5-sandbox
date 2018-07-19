@@ -58,10 +58,7 @@
         "snake-game"
       ],
       "scripts": [
-        "Snake.js"
-      ],
-      "addons": [
-        "../../lib/p5/addons/p5.dom.min.js",
+        "./Snake.js",
         "../../snippets/ArrowKeys.js"
       ]
     },
@@ -74,10 +71,7 @@
         "snake-game"
       ],
       "scripts": [
-        "Snake.js"
-      ],
-      "addons": [
-        "../../lib/p5/addons/p5.dom.min.js",
+        "./Snake.js",
         "../../snippets/ArrowKeys.js"
       ]
     },
@@ -90,7 +84,7 @@
         "menger-sponge"
       ],
       "scripts": [
-        "Box.js"
+        "./Box.js"
       ]
     },
     "cc001": {
@@ -99,7 +93,7 @@
       "category": "coding-challenge",
       "url": "cc001-starfield",
       "scripts": [
-        "Star.js"
+        "./Star.js"
       ]
     },
     "p-1-0-01": {

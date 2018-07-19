@@ -56,16 +56,16 @@ exports.renderIndexPage = id => {
   const addons = project.addons
   if (Array.isArray(addons)) {
     const addonsArr = addons.map(val => `<script src="${val}"></script>`)
-    output = output.replace(addonsOverwrite, addonsArr.join('\n'))
+    output = output.replace(addonsOverwrite, addonsArr.join('\n    '))
   }
   // scripts (options)
   const scripts = project.scripts
   if (Array.isArray(scripts)) {
-    const scriptsArr = scripts.map(val => `<script src="./${val}"></script>`)
-    output = output.replace(scriptsOverwrite, scriptsArr.join('\n'))
+    const scriptsArr = scripts.map(val => `<script src="${val}"></script>`)
+    output = output.replace(scriptsOverwrite, scriptsArr.join('\n    '))
   }
   // project
-  output = output.replace(projectOverwrite, `<script>const project = ${JSON.stringify(project)}</script>`)
+  output = output.replace(projectOverwrite, `<script>const project = ${JSON.stringify(project)};</script>`)
   // save!
   const outputPath = path.resolve(__dirname, `../../docs/${project.group}/${project.url}/index.html`)
   const err = fs.writeFileSync(outputPath, output)
