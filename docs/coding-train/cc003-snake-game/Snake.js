@@ -14,13 +14,13 @@ class Snake {
     this.v = createVector(xs, ys)
   }
   ateFood() {
-    return this.getDist(this.pos, food) < 1
+    return this.pos.dist(food) < 1
   }
   addTail() {
     this.tails.unshift(this.pos.copy())
   }
   death() {
-    const tail = this.tails.find(t => this.getDist(this.pos, t) < 1)
+    const tail = this.tails.find(t => this.pos.dist(t) < 1)
     if (!tail) { return }
     this.tails = []
   }
