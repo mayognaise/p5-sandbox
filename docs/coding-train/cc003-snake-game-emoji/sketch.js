@@ -41,7 +41,7 @@ function draw() {
 }
 
 function keyPressed() {
-  switch (keyCode) {
+  switch(keyCode) {
     case UP_ARROW:
       snake.setDir(0, -1)
       break
