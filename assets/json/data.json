@@ -49,6 +49,18 @@
         "triangle-strip-issue"
       ]
     },
+    "cc003-emoji": {
+      "name": "#3: The Snake Game - Emoji",
+      "group": "coding-train",
+      "category": "coding-challenge",
+      "url": "cc003-snake-game-emoji",
+      "notes": [
+        "snake-game"
+      ],
+      "scripts": [
+        "Snake.js"
+      ]
+    },
     "cc003": {
       "name": "#3: The Snake Game",
       "group": "coding-train",
@@ -110,6 +122,9 @@
     "cc003-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game",
     "cc003-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game",
     "cc003-ref": "http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html",
+    "cc003-emoji-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game-emoji",
+    "cc003-emoji-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game-emoji",
+    "cc003-emoji-ref": "http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html",
     "cc011-code": "https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain",
     "cc011-demo": "https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain",
     "cc011-ref": "http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html",

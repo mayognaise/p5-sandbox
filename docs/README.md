@@ -7,6 +7,7 @@ By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are
 
 ### [Coding Challenge][coding-challenge]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
+- \#3: The Snake Game - Emoji [demo][cc003-emoji-demo] [code][cc003-emoji-code] [reference][cc003-emoji-ref]
 - \#3: The Snake Game [demo][cc003-demo] [code][cc003-code] [reference][cc003-ref]
 - \#2: Menger Sponge Fractal [demo][cc002-demo] [code][cc002-code] [reference][cc002-ref]
 - \#1: Starfield [demo][cc001-demo] [code][cc001-code] [reference][cc001-ref]
@@ -40,6 +41,9 @@ By [Daniel Shiffman][daniel-shiffman]. Any [Processing][processing] projects are
 [cc003-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game
 [cc003-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game
 [cc003-ref]: http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html
+[cc003-emoji-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc003-snake-game-emoji
+[cc003-emoji-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc003-snake-game-emoji
+[cc003-emoji-ref]: http://thecodingtrain.com/CodingChallenges/003-snake-game-p5.html
 [cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
 [cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
 [cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
