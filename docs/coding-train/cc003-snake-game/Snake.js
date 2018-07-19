@@ -7,9 +7,6 @@ class Snake {
   getPos() {
     return this.pos
   }
-  getDist(a, b) {
-    return dist(a.x, a.y, b.x, b.y)
-  }
   setDir(xs, ys) {
     this.v = createVector(xs, ys)
   }
