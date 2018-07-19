@@ -56,7 +56,8 @@
       "url": "cc005-space-invaders",
       "scripts": [
         "./Flower.js",
-        "./Ship.js"
+        "./Ship.js",
+        "../../snippets/ArrowKeys.js"
       ]
     },
     "cc004": {

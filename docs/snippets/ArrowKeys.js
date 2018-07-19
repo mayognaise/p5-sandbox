@@ -1,6 +1,7 @@
 class ArrowKeys {
-  constructor(callback) {
-    this.callback = callback
+  constructor(pressHandleEvent, releaseHandleEvent) {
+    this.pressHandleEvent = pressHandleEvent
+    this.releaseHandleEvent = releaseHandleEvent
     // main element
     this.el = document.createElement('div')
     this.el.id = 'arrowkeys'
@@ -13,17 +14,26 @@ class ArrowKeys {
       button.classList.add(type)
       button.addEventListener('touchstart', e => this.keyPressed(e, type))
       button.addEventListener('mousedown', e => this.keyPressed(e, type))
+      button.addEventListener('click', e => this.keyClicked(e, type))
       this.el.appendChild(button)
     })
   }
   keyPressed(e, type) {
-    // e.preventDefault()
+    switch (type) {
+      case 'UP': return this.pressHandleEvent(UP_ARROW)
+      case 'DOWN': return this.pressHandleEvent(DOWN_ARROW)
+      case 'RIGHT': return this.pressHandleEvent(RIGHT_ARROW)
+      case 'LEFT': return this.pressHandleEvent(LEFT_ARROW)
+      default: return
+    }
+  }
+  keyClicked(e, type) {
     e.currentTarget.blur()
     switch (type) {
-      case 'UP': return this.callback(UP_ARROW)
-      case 'DOWN': return this.callback(DOWN_ARROW)
-      case 'RIGHT': return this.callback(RIGHT_ARROW)
-      case 'LEFT': return this.callback(LEFT_ARROW)
+      case 'UP': return this.releaseHandleEvent(UP_ARROW)
+      case 'DOWN': return this.releaseHandleEvent(DOWN_ARROW)
+      case 'RIGHT': return this.releaseHandleEvent(RIGHT_ARROW)
+      case 'LEFT': return this.releaseHandleEvent(LEFT_ARROW)
       default: return
     }
   }
