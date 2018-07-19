@@ -28,6 +28,7 @@ function draw() {
   fill(0)
   rect(0, 0, cols * scl, rows * scl)
   snake.update()
+  snake.death()
   snake.show()
   if (snake.ateFood()) {
     resetFoodLocation()
