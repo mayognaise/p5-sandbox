@@ -19,6 +19,8 @@ class ArrowKeys {
     })
   }
   keyPressed(e, type) {
+    e.currentTarget.classList.add('active')
+    if (!this.pressHandleEvent) { return }
     switch (type) {
       case 'UP': return this.pressHandleEvent(UP_ARROW)
       case 'DOWN': return this.pressHandleEvent(DOWN_ARROW)
@@ -28,7 +30,9 @@ class ArrowKeys {
     }
   }
   keyClicked(e, type) {
+    e.currentTarget.classList.remove('active')
     e.currentTarget.blur()
+    if (!this.releaseHandleEvent) { return }
     switch (type) {
       case 'UP': return this.releaseHandleEvent(UP_ARROW)
       case 'DOWN': return this.releaseHandleEvent(DOWN_ARROW)
