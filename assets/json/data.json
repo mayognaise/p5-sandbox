@@ -59,6 +59,10 @@
       ],
       "scripts": [
         "Snake.js"
+      ],
+      "addons": [
+        "../../lib/p5/addons/p5.dom.min.js",
+        "../../snippets/ArrowKeys.js"
       ]
     },
     "cc003": {
@@ -71,6 +75,10 @@
       ],
       "scripts": [
         "Snake.js"
+      ],
+      "addons": [
+        "../../lib/p5/addons/p5.dom.min.js",
+        "../../snippets/ArrowKeys.js"
       ]
     },
     "cc002": {

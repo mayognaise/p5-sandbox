@@ -16,6 +16,8 @@ function setup() {
   foodEmojis = shuffle(foodEmojis)
   resetFood()
   noStroke()
+  // for arrow keypads
+  new ArrowKeys(arrowKeyPressed)
 }
 
 function resetFood() {
@@ -46,8 +48,8 @@ function draw() {
   text(foodEmoji, food.x * scl, (food.y + lineHeight) * scl)
 }
 
-function keyPressed() {
-  switch(keyCode) {
+function arrowKeyPressed(key) {
+  switch (key) {
     case UP_ARROW:
       snake.setDir(0, -1)
       break
@@ -63,6 +65,10 @@ function keyPressed() {
     default:
       break
   }
+}
+
+function keyPressed() {
+  arrowKeyPressed(keyCode)
 }
 
 function windowResized() {

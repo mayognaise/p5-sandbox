@@ -11,6 +11,8 @@ function setup() {
   resetFoodLocation()
   background(50)
   noStroke()
+  // for arrow keypads
+  new ArrowKeys(arrowKeyPressed)
 }
 
 function resetFoodLocation() {
@@ -40,8 +42,8 @@ function draw() {
   rect(food.x * scl, food.y * scl, scl, scl)
 }
 
-function keyPressed() {
-  switch (keyCode) {
+function arrowKeyPressed(key) {
+  switch (key) {
     case UP_ARROW:
       snake.setDir(0, -1)
       break
@@ -57,6 +59,10 @@ function keyPressed() {
     default:
       break
   }
+}
+
+function keyPressed() {
+  arrowKeyPressed(keyCode)
 }
 
 function windowResized() {

@@ -102,3 +102,48 @@ $readmeOffsetWidth = 50px
         content: '▸'
   .is-hidden &
     display none
+
+#arrowkeys
+  position fixed
+  z-index 1
+  @media (orientation: portrait)
+    bottom 0
+    left 0
+  @media (orientation: landscape)
+    top: $toggleButtonSize * 2
+    right: $toggleButtonSize * 3 
+  @media (orientation: landscape) and (min-width: 768px)
+    top: $toggleButtonDesktopSize * 2
+    right: $toggleButtonDesktopSize * 3 
+  .toggle-button
+    position absolute
+  .UP
+    bottom: $toggleButtonSize + 1
+    left: $toggleButtonSize + 1
+    @media (min-width: 768px)
+      bottom: $toggleButtonDesktopSize + 1
+      left: $toggleButtonDesktopSize + 1
+    &:after
+      content: '↑'
+  .DOWN
+    bottom 0
+    left: $toggleButtonSize + 1
+    @media (min-width: 768px)
+      left: $toggleButtonDesktopSize + 1
+    &:after
+      content: '↓'
+  .RIGHT
+    bottom: $toggleButtonSize * .5
+    left: ($toggleButtonSize + 1) * 2
+    @media (min-width: 768px)
+      bottom: $toggleButtonDesktopSize * .5
+      left: ($toggleButtonDesktopSize + 1) * 2
+    &:after
+      content: '→'
+  .LEFT
+    bottom: $toggleButtonSize * .5
+    left 0
+    @media (min-width: 768px)
+      bottom: $toggleButtonDesktopSize * .5
+    &:after
+      content: '←'
