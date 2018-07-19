@@ -9,7 +9,7 @@ function setup() {
   ship = new Ship()
   noStroke()
   rectMode(CENTER)
-  // for arrow keypads
+  // for arrow keypads (debug)
   new ArrowKeys(arrowKeyPressed, arrowKeyReleased)
 }
 

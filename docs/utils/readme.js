@@ -39,7 +39,6 @@ module.exports = class ReadMe {
   }
   getJSText(data) {
     const spliceList = [
-      '//'
     ]
     const array = data.split('\n')
     for (let count = array.length - 1; count > -1; count--) {

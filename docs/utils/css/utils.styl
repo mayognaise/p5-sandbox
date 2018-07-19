@@ -46,6 +46,8 @@ body
 
 $readmeOffsetWidth = 50px
 #readme
+  position fixed
+  z-index 2
   .wrapper
     -webkit-overflow-scrolling touch
     background #fafafa
@@ -53,7 +55,6 @@ $readmeOffsetWidth = 50px
     overflow-x hidden
     overflow-y auto
     position fixed
-    z-index 2
     right 0
     top 0
     width: 'calc(100% - %s)' % $readmeOffsetWidth
@@ -86,6 +87,8 @@ $readmeOffsetWidth = 50px
     margin 0
   code
     padding 1rem 1rem 2rem
+    -webkit-user-select all
+    user-select all
   .toggle-button
     bottom 0
     right 0
