@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.24.6",
     "css-loader": "^1.0.0",
     "highlight.js": "^9.12.0",
     "showdown": "^1.8.6",
