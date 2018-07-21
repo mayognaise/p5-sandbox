@@ -1,3 +1,4 @@
+const ga = require('../../docs/utils/ga')
 require('../../docs/utils/css/default.styl')
 require('./base.styl')
 
@@ -26,6 +27,8 @@ const onContentLoaded = () => {
       }
     }
   }
+  // ga
+  ga()
 }
 
 document.addEventListener('DOMContentLoaded', onContentLoaded)

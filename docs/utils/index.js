@@ -3,6 +3,7 @@ require('./css/utils.styl')
 const Stats = require('./Stats')
 const ReadMe = require('./ReadMe')
 const Controller = require('./Controller')
+const ga = require('./ga')
 
 let statsItem
 
@@ -22,6 +23,7 @@ const onContentLoaded = () => {
     files.concat(project.scripts)
   }
   new ReadMe(files)
+  ga()
 }
 
 document.addEventListener('DOMContentLoaded', onContentLoaded)
