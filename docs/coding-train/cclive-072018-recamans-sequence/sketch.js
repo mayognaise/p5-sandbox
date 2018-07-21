@@ -12,8 +12,6 @@ let arcCount = 0
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
-  background(0)
-  // frameRate(1)
 }
 
 function draw() {
