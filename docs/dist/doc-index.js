@@ -116,6 +116,43 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./docs/utils/ga.js":
+/*!**************************!*\
+  !*** ./docs/utils/ga.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+  //   < !--Global site tag(gtag.js) - Google Analytics-- >
+  // <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31506713-2"></script>
+  // <script>
+  //   window.dataLayer = window.dataLayer || [];
+  //     function gtag() {dataLayer.push(arguments); }
+  //   gtag('js', new Date());
+  //   gtag('config', 'UA-31506713-2');
+  //   </script>
+
+module.exports = () => {
+  // lib
+  const lib = document.createElement('script')
+  lib.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=UA-31506713-2')
+  lib.async = true
+  document.head.appendChild(lib)
+  // config
+  const config = document.createElement('script')
+  config.innerHTML = `
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-31506713-2');
+  `
+  document.head.appendChild(config)
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/stylus-loader/index.js!./docs/utils/css/default.styl":
 /*!********************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/stylus-loader!./docs/utils/css/default.styl ***!
@@ -739,6 +776,7 @@ module.exports = function (css) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+const ga = __webpack_require__(/*! ../../docs/utils/ga */ "./docs/utils/ga.js")
 __webpack_require__(/*! ../../docs/utils/css/default.styl */ "./docs/utils/css/default.styl")
 __webpack_require__(/*! ./base.styl */ "./scripts/build-doc-index/base.styl")
 
@@ -767,6 +805,8 @@ const onContentLoaded = () => {
       }
     }
   }
+  // ga
+  ga()
 }
 
 document.addEventListener('DOMContentLoaded', onContentLoaded)

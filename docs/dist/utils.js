@@ -364,6 +364,43 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./docs/utils/ga.js":
+/*!**************************!*\
+  !*** ./docs/utils/ga.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+  //   < !--Global site tag(gtag.js) - Google Analytics-- >
+  // <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31506713-2"></script>
+  // <script>
+  //   window.dataLayer = window.dataLayer || [];
+  //     function gtag() {dataLayer.push(arguments); }
+  //   gtag('js', new Date());
+  //   gtag('config', 'UA-31506713-2');
+  //   </script>
+
+module.exports = () => {
+  // lib
+  const lib = document.createElement('script')
+  lib.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=UA-31506713-2')
+  lib.async = true
+  document.head.appendChild(lib)
+  // config
+  const config = document.createElement('script')
+  config.innerHTML = `
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-31506713-2');
+  `
+  document.head.appendChild(config)
+}
+
+
+/***/ }),
+
 /***/ "./docs/utils/index.js":
 /*!*****************************!*\
   !*** ./docs/utils/index.js ***!
@@ -376,6 +413,7 @@ __webpack_require__(/*! ./css/utils.styl */ "./docs/utils/css/utils.styl")
 const Stats = __webpack_require__(/*! ./Stats */ "./docs/utils/Stats.js")
 const ReadMe = __webpack_require__(/*! ./ReadMe */ "./docs/utils/ReadMe.js")
 const Controller = __webpack_require__(/*! ./Controller */ "./docs/utils/Controller.js")
+const ga = __webpack_require__(/*! ./ga */ "./docs/utils/ga.js")
 
 let statsItem
 
@@ -395,6 +433,7 @@ const onContentLoaded = () => {
     files.concat(project.scripts)
   }
   new ReadMe(files)
+  ga()
 }
 
 document.addEventListener('DOMContentLoaded', onContentLoaded)

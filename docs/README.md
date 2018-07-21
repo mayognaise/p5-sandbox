@@ -9,7 +9,8 @@ Here is note different from original code:
 By [Daniel Shiffman][daniel-shiffman].
 
 ### [Coding Challenge][coding-challenge]
-- LIVE: Recamán's Sequence [demo][cclive-072018-demo] [code][cclive-072018-code] [reference][cclive-072018-ref]
+- LIVE: ml5.js [demo][cclive-072018-ml5-demo] [code][cclive-072018-ml5-code] [reference][cclive-072018-ml5-ref]
+- LIVE: Recamán's Sequence [demo][cclive-072018-recamans-demo] [code][cclive-072018-recamans-code] [reference][cclive-072018-recamans-ref]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
 - \#5: Space Invaders [demo][cc005-demo] [code][cc005-code] [reference][cc005-ref]
 - \#4: Purple Rain [demo][cc004-demo] [code][cc004-code] [reference][cc004-ref]
@@ -33,6 +34,7 @@ By [Daniel Shiffman][daniel-shiffman].
 [p5-sandbox]: https://mayognaise.github.io/p5-sandbox
 [p5-js]: https://p5js.org
 [processing]: https://processing.org/
+[ml5]: https://ml5js.org/
 [coding-train]: http://thecodingtrain.com
 [daniel-shiffman]: https://shiffman.net
 [coding-challenge]: http://thecodingtrain.com/CodingChallenges
@@ -59,9 +61,12 @@ By [Daniel Shiffman][daniel-shiffman].
 [cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
 [cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
 [cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
-[cclive-072018-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cclive-072018-recamans-sequence
-[cclive-072018-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cclive-072018-recamans-sequence
-[cclive-072018-ref]: https://youtu.be/XXwjcxMOA8s
+[cclive-072018-recamans-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cclive-072018-recamans-sequence
+[cclive-072018-recamans-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cclive-072018-recamans-sequence
+[cclive-072018-recamans-ref]: https://youtu.be/XXwjcxMOA8s
+[cclive-072018-ml5-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cclive-072018-ml5
+[cclive-072018-ml5-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cclive-072018-ml5
+[cclive-072018-ml5-ref]: https://youtu.be/XXwjcxMOA8s
 [p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/generative-design/p-1-0-01
 [p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
 [p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
