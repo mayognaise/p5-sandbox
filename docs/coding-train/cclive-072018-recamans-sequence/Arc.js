@@ -33,7 +33,7 @@ class Arc {
       }
     }
     stroke(255)
-    strokeWeight(.002 * biggest)
+    strokeWeight(.001 * biggest)
     noFill()
     arc(x, 0, dia, dia, r0, r1)
     if (this.count < arcDiv) {
