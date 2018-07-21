@@ -1,7 +1,7 @@
 class Arc {
   constructor(start, end, dir, backward) {
     this.x = (end + start) / 2
-    this.dia = end - start
+    this.dia = abs(end - start)
     this.vect = dir === 0 ? 1 : -1
     this.backward = backward
     this.count = 1
@@ -33,7 +33,7 @@ class Arc {
       }
     }
     stroke(255)
-    strokeWeight(.002 / (scl / width))
+    strokeWeight(.002 * biggest)
     noFill()
     arc(x, 0, dia, dia, r0, r1)
     if (this.count < arcDiv) {

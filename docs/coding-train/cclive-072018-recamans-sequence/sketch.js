@@ -1,9 +1,6 @@
 let count = 1
 let index = 0
 const numbers = []
-const sequence = []
-let scl
-
 const arcs = []
 let biggest = 0
 
@@ -21,11 +18,12 @@ function draw() {
   background(0)
   arcCount++
   translate(0, height / 2)
-  scl = width / biggest
+  const scl = width / biggest
   // const scl = lerp(width, biggest)
   scale(scl)
-  // scale(40)
-  arcs.forEach(arc => arc.show())
+  for (let arc of arcs) {
+    arc.show()
+  }
 }
 
 function step() {
@@ -36,10 +34,8 @@ function step() {
     backward = false
   }
   numbers[next] = true
-  sequence.push(next)
-
-  const a = new Arc(index, next, count % 2, backward)
-  arcs.push(a)
+  const arc = new Arc(index, next, count % 2, backward, arcs.length)
+  arcs.push(arc)
 
   index = next
   if (index > biggest) {
