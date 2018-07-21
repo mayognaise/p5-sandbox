@@ -72,3 +72,4 @@ By [Daniel Shiffman][daniel-shiffman].
 [webgl]: https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5
 [recamans-sequence]: https://oeis.org/A005132
 [recamans-sequence-numberphile]: https://youtu.be/FGC5TdIiT9U
+[piano-key-frequencies]: https://en.wikipedia.org/wiki/Piano_key_frequencies

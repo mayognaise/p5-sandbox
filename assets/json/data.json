@@ -43,6 +43,9 @@
     },
     "recamans-sequence-numberphile": {
       "name": "The Slightly Spooky Recamán Sequence - Numberphile"
+    },
+    "piano-key-frequencies": {
+      "name": "Piano key frequencies"
     }
   },
   "projects": {
@@ -59,7 +62,8 @@
       ],
       "notes": [
         "recamans-sequence",
-        "recamans-sequence-numberphile"
+        "recamans-sequence-numberphile",
+        "piano-key-frequencies"
       ]
     },
     "cc011": {
@@ -190,6 +194,7 @@
     "vector-example": "https://mayognaise.github.io/p5-vector-examples",
     "webgl": "https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5",
     "recamans-sequence": "https://oeis.org/A005132",
-    "recamans-sequence-numberphile": "https://youtu.be/FGC5TdIiT9U"
+    "recamans-sequence-numberphile": "https://youtu.be/FGC5TdIiT9U",
+    "piano-key-frequencies": "https://en.wikipedia.org/wiki/Piano_key_frequencies"
   }
 }

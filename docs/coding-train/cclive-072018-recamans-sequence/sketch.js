@@ -9,8 +9,27 @@ let scl = 0
 const arcDiv = 30
 let arcCount = 0
 
+// for sound
+let osc
+let env
+const attackLevel = 1.0
+const releaseLevel = 0
+const attackTime = 0.001
+const decayTime = 0.2
+const susPercent = 0.2
+const releaseTime = 0.5
+
 function setup() {
   createCanvas(windowWidth, windowHeight)
+
+  env = new p5.Env()
+  env.setADSR(attackTime, decayTime, susPercent, releaseTime)
+  env.setRange(attackLevel, releaseLevel)
+
+  osc = new p5.Oscillator()
+  osc.setType('sine')
+  osc.amp(env)
+  osc.start()
 }
 
 function draw() {
@@ -38,10 +57,16 @@ function step() {
   const arc = new Arc(index, next, count % 2, backward, arcs.length)
   arcs.push(arc)
 
+  const n = index % 25
+  const freq = pow(2, (n - 49) / 12) * 440
+  osc.freq(freq)
+  env.play()
+
   index = next
   if (index > biggest) {
     biggest = index
   }
+
   count++
 }
 
