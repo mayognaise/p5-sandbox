@@ -3,7 +3,7 @@ let mobilenet
 let result
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(320, 320)
   video = createCapture(VIDEO)
   video.hide()
   mobilenet = ml5.imageClassifier('MobileNet', video, mobileReady)
@@ -15,8 +15,8 @@ function draw() {
   if (!result) { return }
   fill(255)
   textSize(24)
-  text(result.className, 30, height - 24)
-  text(result.probability, 30, height)
+  text(result.className, 0, height - 24)
+  text(result.probability, 0, height)
 }
 
 function mobileReady() {
