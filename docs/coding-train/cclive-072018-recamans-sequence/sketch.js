@@ -3,7 +3,9 @@ let index = 0
 const numbers = []
 const arcs = []
 let biggest = 0
+let scl = 0
 
+// for stroke animation
 const arcDiv = 30
 let arcCount = 0
 
@@ -18,8 +20,7 @@ function draw() {
   background(0)
   arcCount++
   translate(0, height / 2)
-  const scl = width / biggest
-  // const scl = lerp(width, biggest)
+  scl = lerp(scl, width / biggest, .1)
   scale(scl)
   for (let arc of arcs) {
     arc.show()
