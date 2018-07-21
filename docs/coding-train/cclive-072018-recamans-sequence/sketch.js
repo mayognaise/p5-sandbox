@@ -57,7 +57,8 @@ function step() {
   const arc = new Arc(index, next, count % 2, backward, arcs.length)
   arcs.push(arc)
 
-  const n = index % 16 + 40 // c′ 1-line octave to c′′′ 3-line octave
+  const n = index % 25 + 40 // C4 Middle C (40) - C6 Soprano C (High C) (64)
+  console.log(n)
   const freq = pow(2, (n - 49) / 12) * 440
   osc.freq(freq)
   env.play()
