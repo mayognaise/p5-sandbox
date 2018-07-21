@@ -70,3 +70,5 @@ By [Daniel Shiffman][daniel-shiffman].
 [triangle-strip-issue]: https://github.com/processing/p5.js/issues/2344
 [vector-example]: https://mayognaise.github.io/p5-vector-examples
 [webgl]: https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5
+[recamans-sequence]: https://oeis.org/A005132
+[recamans-sequence-numberphile]: https://youtu.be/FGC5TdIiT9U

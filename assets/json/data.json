@@ -37,6 +37,12 @@
     },
     "triangle-strip-issue": {
       "name": "TRIANGLE_STRIP with WEBGL is not working properly"
+    },
+    "recamans-sequence": {
+      "name": "Recamán's sequence"
+    },
+    "recamans-sequence-numberphile": {
+      "name": "The Slightly Spooky Recamán Sequence - Numberphile"
     }
   },
   "projects": {
@@ -47,6 +53,13 @@
       "url": "cclive-072018-recamans-sequence",
       "scripts": [
         "./Arc.js"
+      ],
+      "addons": [
+        "../../lib/p5/addons/p5.sound.min.js"
+      ],
+      "notes": [
+        "recamans-sequence",
+        "recamans-sequence-numberphile"
       ]
     },
     "cc011": {
@@ -175,6 +188,8 @@
     "snake-game": "https://en.wikipedia.org/wiki/Snake_(video_game_genre)",
     "triangle-strip-issue": "https://github.com/processing/p5.js/issues/2344",
     "vector-example": "https://mayognaise.github.io/p5-vector-examples",
-    "webgl": "https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"
+    "webgl": "https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5",
+    "recamans-sequence": "https://oeis.org/A005132",
+    "recamans-sequence-numberphile": "https://youtu.be/FGC5TdIiT9U"
   }
 }
