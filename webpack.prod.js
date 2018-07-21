@@ -4,9 +4,10 @@ const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
   mode: 'production',
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin()
-    ]
-  }
+  devtool: 'source-map',
+  plugins: [
+    new UglifyJsPlugin({
+      sourceMap: true
+    })
+  ]
 })
