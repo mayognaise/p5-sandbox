@@ -9,6 +9,7 @@ Here is note different from original code:
 By [Daniel Shiffman][daniel-shiffman].
 
 ### [Coding Challenge][coding-challenge]
+- LIVE: Recamán's Sequence [demo][cclive-072018-demo] [code][cclive-072018-code] [reference][cclive-072018-ref]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
 - \#5: Space Invaders [demo][cc005-demo] [code][cc005-code] [reference][cc005-ref]
 - \#4: Purple Rain [demo][cc004-demo] [code][cc004-code] [reference][cc004-ref]
@@ -58,6 +59,9 @@ By [Daniel Shiffman][daniel-shiffman].
 [cc011-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cc011-perlinnoiseterrain
 [cc011-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cc011-perlinnoiseterrain
 [cc011-ref]: http://thecodingtrain.com/CodingChallenges/011-perlinnoiseterrain.html
+[cclive-072018-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/coding-train/cclive-072018-recamans-sequence
+[cclive-072018-demo]: https://mayognaise.github.io/p5-sandbox/coding-train/cclive-072018-recamans-sequence
+[cclive-072018-ref]: https://youtu.be/XXwjcxMOA8s
 [p-1-0-01-code]: https://github.com/mayognaise/p5-sandbox/tree/master/docs/generative-design/p-1-0-01
 [p-1-0-01-demo]: https://mayognaise.github.io/p5-sandbox/generative-design/p-1-0-01
 [p-1-0-01-ref]: https://editor.p5js.org/generative-design/sketches/P_1_0_01
