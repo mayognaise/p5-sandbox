@@ -1,23 +1,23 @@
+const numbers = []
+const arcs = []
 let count = 1
 let index = 0
 let biggest = 0
 let scl = 0
-const numbers = []
-const arcs = []
 
 // for stroke animation
 const arcDiv = 30
 let arcCount = 0
 
 // for sound
-let osc
-let env
 const attackLevel = 1.0
 const releaseLevel = 0
-const attackTime = 0.001
-const decayTime = 0.2
-const susPercent = 0.2
-const releaseTime = 0.5
+const attackTime = .001
+const decayTime = .1
+const susPercent = .2
+const releaseTime = .03
+let osc
+let env
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
@@ -58,7 +58,6 @@ function step() {
   arcs.push(arc)
 
   const n = index % 25 + 40 // C4 Middle C (40) - C6 Soprano C (High C) (64)
-  console.log(n)
   const freq = pow(2, (n - 49) / 12) * 440
   osc.freq(freq)
   env.play()
