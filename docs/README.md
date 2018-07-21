@@ -78,3 +78,6 @@ By [Daniel Shiffman][daniel-shiffman].
 [recamans-sequence]: https://oeis.org/A005132
 [recamans-sequence-numberphile]: https://youtu.be/FGC5TdIiT9U
 [piano-key-frequencies]: https://en.wikipedia.org/wiki/Piano_key_frequencies
+[imagenet]: http://www.image-net.org/
+[imagenet1000_clsid_to_human]: https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a
+[arXiv:1704.04861]: https://arxiv.org/abs/1704.04861

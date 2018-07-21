@@ -49,6 +49,15 @@
     },
     "ml5": {
       "name": "ml5.js"
+    },
+    "imagenet": {
+      "name": "ImageNet"
+    },
+    "imagenet1000_clsid_to_human": {
+      "name": "text: imagenet 1000 class id to human readable labels"
+    },
+    "arXiv:1704.04861": {
+      "name": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
     }
   },
   "projects": {
@@ -60,10 +69,14 @@
       "scripts": [
       ],
       "addons": [
+        "../../lib/p5/addons/p5.dom.min.js",
         "../../lib/ml5/ml5.min.js"
       ],
       "notes": [
-        "ml5"
+        "ml5",
+        "imagenet",
+        "imagenet1000_clsid_to_human",
+        "arXiv:1704.04861"
       ]
     },
     "cclive-072018-recamans": {
@@ -216,6 +229,9 @@
     "webgl": "https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5",
     "recamans-sequence": "https://oeis.org/A005132",
     "recamans-sequence-numberphile": "https://youtu.be/FGC5TdIiT9U",
-    "piano-key-frequencies": "https://en.wikipedia.org/wiki/Piano_key_frequencies"
+    "piano-key-frequencies": "https://en.wikipedia.org/wiki/Piano_key_frequencies",
+    "imagenet": "http://www.image-net.org/",
+    "imagenet1000_clsid_to_human": "https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a",
+    "arXiv:1704.04861": "https://arxiv.org/abs/1704.04861"
   }
 }
