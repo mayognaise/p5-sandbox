@@ -62,7 +62,7 @@
   },
   "projects": {
     "cclive-072018-ml5": {
-      "name": "LIVE: ml5.js",
+      "name": "LIVE 072018: ml5.js",
       "group": "coding-train",
       "category": "coding-challenge",
       "url": "cclive-072018-ml5",
@@ -80,7 +80,7 @@
       ]
     },
     "cclive-072018-recamans": {
-      "name": "LIVE: Recamán's Sequence",
+      "name": "LIVE 072018: Recamán's Sequence",
       "group": "coding-train",
       "category": "coding-challenge",
       "url": "cclive-072018-recamans-sequence",

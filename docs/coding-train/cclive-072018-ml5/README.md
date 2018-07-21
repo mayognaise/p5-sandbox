@@ -1,6 +1,6 @@
 ## [p5 Sandbox][p5-sandbox]
 
-- LIVE: ml5.js [demo][cclive-072018-ml5-demo] [code][cclive-072018-ml5-code] [reference][cclive-072018-ml5-ref]
+- LIVE 072018: ml5.js [demo][cclive-072018-ml5-demo] [code][cclive-072018-ml5-code] [reference][cclive-072018-ml5-ref]
 
 ### Notes
 - [ml5.js][ml5]

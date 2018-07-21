@@ -1,24 +1,35 @@
 let video
 let mobilenet
+let result
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
   video = createCapture(VIDEO)
   video.hide()
-  // Create the classifier with MobileNet
-  mobilenet = ml5.imageClassifier('MobileNet', mobileReady)
-  // Make a prediction
-  // let prediction = mobilenet.predict(video, mobileReady)
-  // console.log(prediction)
+  mobilenet = ml5.imageClassifier('MobileNet', video, mobileReady)
 }
 
 function draw() {
+  background(0)
   image(video, 0, 0, 320, 240)
+  if (!result) { return }
+  fill(255)
+  textSize(24)
+  text(result.className, 30, height - 24)
+  text(result.probability, 30, height)
 }
 
-// Log the results
 function mobileReady() {
-  console.log('mobile ready!')
+  mobilenet.predict(gotResult, 1)
+}
+
+function gotResult(err, results) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  result = results[0]
+  mobilenet.predict(gotResult, 1)
 }
 
 function windowResized() {

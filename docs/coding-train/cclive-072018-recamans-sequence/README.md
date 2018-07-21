@@ -1,6 +1,6 @@
 ## [p5 Sandbox][p5-sandbox]
 
-- LIVE: Recamán's Sequence [demo][cclive-072018-recamans-demo] [code][cclive-072018-recamans-code] [reference][cclive-072018-recamans-ref]
+- LIVE 072018: Recamán's Sequence [demo][cclive-072018-recamans-demo] [code][cclive-072018-recamans-code] [reference][cclive-072018-recamans-ref]
 
 ### Notes
 - [Recamán's sequence][recamans-sequence]

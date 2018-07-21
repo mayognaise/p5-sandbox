@@ -9,8 +9,8 @@ Here is note different from original code:
 By [Daniel Shiffman][daniel-shiffman].
 
 ### [Coding Challenge][coding-challenge]
-- LIVE: ml5.js [demo][cclive-072018-ml5-demo] [code][cclive-072018-ml5-code] [reference][cclive-072018-ml5-ref]
-- LIVE: Recamán's Sequence [demo][cclive-072018-recamans-demo] [code][cclive-072018-recamans-code] [reference][cclive-072018-recamans-ref]
+- LIVE 072018: ml5.js [demo][cclive-072018-ml5-demo] [code][cclive-072018-ml5-code] [reference][cclive-072018-ml5-ref]
+- LIVE 072018: Recamán's Sequence [demo][cclive-072018-recamans-demo] [code][cclive-072018-recamans-code] [reference][cclive-072018-recamans-ref]
 - \#11: 3D Terrain Generation with Perlin Noise [demo][cc011-demo] [code][cc011-code] [reference][cc011-ref]
 - \#5: Space Invaders [demo][cc005-demo] [code][cc005-code] [reference][cc005-ref]
 - \#4: Purple Rain [demo][cc004-demo] [code][cc004-code] [reference][cc004-ref]
