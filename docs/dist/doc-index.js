@@ -147,7 +147,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".container {\n  margin: auto;\n  max-width: 1024px;\n  min-width: 288px;\n  padding-bottom: 1rem;\n  width: 80%;\n  position: relative;\n  z-index: 1;\n}\nh3 + ul {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  padding-left: 0;\n}\nh3 + ul li {\n  background: no-repeat 0 0;\n  background-size: contain;\n  margin: 0.5rem;\n  margin-top: calc(20px + 1rem);\n  padding-bottom: 0.5rem;\n  padding-top: calc(50% - 0.5rem);\n  position: relative;\n  width: calc(50% - 1rem);\n}\nh3 + ul li:nth-child(1),\nh3 + ul li:nth-child(2) {\n  margin-top: 0;\n}\n@media print, (min-width: 768px) {\n  h3 + ul li {\n    padding-top: calc(33.3% - 0.5rem);\n    width: calc(33.3% - 1rem);\n  }\n  h3 + ul li:nth-child(3) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1024px) {\n  h3 + ul li {\n    padding-top: calc(25% - 0.5rem);\n    width: calc(25% - 1rem);\n  }\n  h3 + ul li:nth-child(4) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1280px) {\n  h3 + ul li {\n    padding-top: calc(20% - 0.5rem);\n    width: calc(20% - 1rem);\n  }\n  h3 + ul li:nth-child(5) {\n    margin-top: 0;\n  }\n}\nh3 + ul li a {\n  display: block;\n}\nh3 + ul li a:first-child {\n  margin-top: 0.5rem;\n}\nh3 + ul li p {\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, ".container {\n  margin: auto;\n  max-width: 1024px;\n  min-width: 288px;\n  padding-bottom: 1rem;\n  width: 80%;\n  position: relative;\n  z-index: 1;\n}\nh3 + ul {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  margin-left: -0.5rem;\n  margin-right: -0.5rem;\n  padding-left: 0;\n}\nh3 + ul li {\n  background: no-repeat 0 0;\n  background-size: contain;\n  margin: 0.5rem;\n  margin-top: calc(20px + 1rem);\n  padding-bottom: 0.5rem;\n  padding-top: calc(50% - 0.5rem);\n  position: relative;\n  width: calc(50% - 1rem);\n}\nh3 + ul li:nth-child(1),\nh3 + ul li:nth-child(2) {\n  margin-top: 0;\n}\n@media print, (min-width: 768px) {\n  h3 + ul li {\n    padding-top: calc(33.3% - 0.5rem);\n    width: calc(33.3% - 1rem);\n  }\n  h3 + ul li:nth-child(3) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1024px) {\n  h3 + ul li {\n    padding-top: calc(25% - 0.5rem);\n    width: calc(25% - 1rem);\n  }\n  h3 + ul li:nth-child(4) {\n    margin-top: 0;\n  }\n}\n@media print, (min-width: 1280px) {\n  h3 + ul li {\n    padding-top: calc(20% - 0.5rem);\n    width: calc(20% - 1rem);\n  }\n  h3 + ul li:nth-child(5) {\n    margin-top: 0;\n  }\n}\nh3 + ul li a {\n  display: block;\n}\nh3 + ul li a:first-child {\n  margin-top: 0.5rem;\n}\nh3 + ul li p {\n  margin: 0;\n}\nh3 + ul li .link-sq {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  left: 0;\n  padding-top: 100%;\n  background: none;\n}\n", ""]);
 
 // exports
 
@@ -745,12 +745,21 @@ __webpack_require__(/*! ./base.styl */ "./scripts/build-doc-index/base.styl")
 const onContentLoaded = () => {
   // unfocus when any link is clicked
   const linkItems = document.querySelectorAll('a')
-  for (var item of linkItems) {
+  for (let item of linkItems) {
     item.addEventListener('click', e => e.currentTarget.blur())
+  }
+  // add link for square image
+  const listItems = document.querySelectorAll('h3 + ul li')
+  for (let item of listItems) {
+    const el = item.querySelector('a').cloneNode()
+    el.classList.add('link-sq')
+    item.appendChild(el)
+    // console.log(el)
+    // p_prime = p.cloneNode(true)
   }
   // for development
   if (window.location.port === '4649') {
-    for (var item of linkItems) {
+    for (let item of linkItems) {
       const href = item.getAttribute('href')
       const link = 'https://mayognaise.github.io/p5-sandbox'
       if (href.indexOf(link) === 0) {
