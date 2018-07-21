@@ -66,8 +66,6 @@
       "group": "coding-train",
       "category": "coding-challenge",
       "url": "cclive-072018-ml5",
-      "scripts": [
-      ],
       "addons": [
         "../../lib/p5/addons/p5.dom.min.js",
         "../../lib/ml5/ml5.min.js"

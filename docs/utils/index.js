@@ -18,9 +18,9 @@ const onContentLoaded = () => {
   statsItem = new Stats()
   updateStats()
   new Controller()
-  let files = ['README.md', 'sketch.js']
+  let files = ['./README.md', './sketch.js']
   if (project.scripts) {
-    files.concat(project.scripts)
+    files = files.concat(project.scripts)
   }
   new ReadMe(files)
   ga()

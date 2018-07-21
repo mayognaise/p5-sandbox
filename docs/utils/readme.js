@@ -71,7 +71,8 @@ module.exports = class ReadMe {
         // header
         const header = document.createElement('h3')
         header.classList.add('title')
-        header.innerHTML = title
+        const titles = title.split('/')
+        header.innerHTML = titles[titles.length - 1]
         this.wrapper.appendChild(header)
         // highlight code
         const pre = document.createElement('pre')
