@@ -1,9 +1,9 @@
 let count = 1
 let index = 0
-const numbers = []
-const arcs = []
 let biggest = 0
 let scl = 0
+const numbers = []
+const arcs = []
 
 // for stroke animation
 const arcDiv = 30
@@ -57,7 +57,7 @@ function step() {
   const arc = new Arc(index, next, count % 2, backward, arcs.length)
   arcs.push(arc)
 
-  const n = index % 25
+  const n = index % 16 + 40 // c′ 1-line octave to c′′′ 3-line octave
   const freq = pow(2, (n - 49) / 12) * 440
   osc.freq(freq)
   env.play()
