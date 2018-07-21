@@ -1,17 +1,17 @@
 class Arc {
-  constructor(start, end, dir, backwards) {
+  constructor(start, end, dir, backward) {
     this.x = (end + start) / 2
     this.dia = end - start
     this.vect = dir === 0 ? 1 : -1
-    this.backwards = backwards
+    this.backward = backward
     this.count = 1
-    // console.log('[Arc] start:', start, ',end:', end, ',dir:', dir, ', vect:', this.vect, ', backwards:', this.backwards)
+    // console.log('[Arc] start:', start, ',end:', end, ',dir:', dir, ', vect:', this.vect, ', backward:', this.backward)
   }
   show() {
-    const { x, dia, count, vect, backwards } = this
+    const { x, dia, count, vect, backward } = this
     let r0, r1
     const len = (count / arcDiv) * PI
-    if (backwards) {
+    if (backward) {
       if (vect === 1) {
         // cw
         r0 = 0

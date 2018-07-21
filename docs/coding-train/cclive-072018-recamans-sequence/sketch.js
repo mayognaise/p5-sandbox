@@ -30,15 +30,15 @@ function draw() {
 
 function step() {
   let next = index - count
-  let backwards = true
+  let backward = true
   if (next <= 0 || numbers[next]) {
     next = index + count
-    backwards = false
+    backward = false
   }
   numbers[next] = true
   sequence.push(next)
 
-  const a = new Arc(index, next, count % 2, backwards)
+  const a = new Arc(index, next, count % 2, backward)
   arcs.push(a)
 
   index = next
